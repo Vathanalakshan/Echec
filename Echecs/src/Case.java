@@ -4,10 +4,10 @@ public class Case {
 	public int colonne;
 	public Piece piece;
 	
-	public Case(int ligne , int  colonne){
+	public Case(int ligne , int colonne,Piece p){
 		this.ligne=ligne;
 		this.colonne=colonne;
-		//Algo pour indentifier la piéce
+		this.piece=p;
 	}
 	
 	public void setligne(int ligne){
@@ -26,5 +26,11 @@ public class Case {
 		return this.colonne;
 	}
 	
-	/* get set Piece*/
+	public void  setpiece(Piece p){
+		this.piece=p;
+	}
+	
+	public Piece getpiece(){
+		return this.piece;
+	}
 }

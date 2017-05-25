@@ -1,14 +1,14 @@
 
 public abstract class Piece {//Classed mére
 	boolean couleur;//Couleur de la piéce
-	int position;//Position dans le quelle la piece se trouve
+	int x,y;//Position dans le quelle la piece se trouve
 	String nom;//Nom de la piece
 	
 //Constructeur
 	
-	public Piece(boolean coul,int pos,String nom){
+	public Piece(boolean coul,int x,int y,String nom){
 		setcouleur(coul);
-		setposition(pos);
+		setposition(x,y);
 		setnom(nom);
 	}
 	
@@ -20,12 +20,16 @@ public abstract class Piece {//Classed mére
 		this.nom=nom;
 	}
 	
-	public int getposition(){
-		return position;
+	public int getpositionabs(){
+		return x;
+	}
+	public int getpositionord(){
+		return y;
 	}
 	
-	public void setposition(int pos){
-		this.position=pos;
+	public void setposition(int l,int m){
+		this.x=l;
+		this.y=m;
 	}
 	
 	public boolean getcoul(){
