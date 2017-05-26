@@ -33,14 +33,14 @@ public class Echiquier {
 	 		echi[1][6].setPiece(new Pion(1,0,7));
 	 		echi[1][7].setPiece(new Pion(1,0,7));
 	 
-	 		echi[7][0].setPiece(new Pion(0,0,7));
-	 		echi[7][1].setPiece(new Pion(0,0,7));
-	 		echi[7][2].setPiece(new Pion(0,0,7));
-	 		echi[7][3].setPiece(new Pion(0,0,7));
-	 		echi[7][4].setPiece(new Pion(0,0,7));
-	 		echi[7][5].setPiece(new Pion(0,0,7));
-	 		echi[7][6].setPiece(new Pion(0,0,7));
-	 		echi[7][7].setPiece(new Pion(0,0,7));
+	 		echi[6][0].setPiece(new Pion(0,0,7));
+	 		echi[6][1].setPiece(new Pion(0,0,7));
+	 		echi[6][2].setPiece(new Pion(0,0,7));
+	 		echi[6][3].setPiece(new Pion(0,0,7));
+	 		echi[6][4].setPiece(new Pion(0,0,7));
+	 		echi[6][5].setPiece(new Pion(0,0,7));
+	 		echi[6][6].setPiece(new Pion(0,0,7));
+	 		echi[6][7].setPiece(new Pion(0,0,7));
 	 
 	 
 	 		echi[7][0].setPiece(new Tour(0,0,0));
@@ -56,10 +56,12 @@ public class Echiquier {
 	  	
 	 	public void afficher(){
 	 		for(int i=0;i<8;i++){
+	 			if(i%2!=0){System.out.print('\n');}
 	 			for(int j=0;j<8;j++){
 	 				if(echi[i][j].getPiece()!=null){
+
 	 				String k=echi[i][j].toString();
-	 				System.out.println(k);}
+	 				System.out.print(k);}
 	 
 	 	   }
 	 
