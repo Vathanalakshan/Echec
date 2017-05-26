@@ -1,9 +1,20 @@
 
-public class Cavalier extends Piece {
 
-	public Cavalier(boolean coul, int pos, String nom) {
-		super(coul, pos, nom);
-		// TODO Auto-generated constructor stub
+public class Cavalier extends Piece {
+	
+	public Cavalier(int couleur,int x,int y){
+		super("Cavalier",couleur, x, y);
+		
 	}
+	
+	public String toString() {
+	
+		if(couleur==1)
+		{
+		return "\u2658";
+		}
+		return "\u265E ";
+	}
+	
 
 }
