@@ -1,9 +1,18 @@
 
-public class Reine extends Piece {
 
-	public Reine(boolean coul, int x,int y,String nom) {
-		super(coul, x,y,nom);
-		// TODO Auto-generated constructor stub
+public class Reine extends Piece {
+	public Reine(int couleur,int x,int y){
+		super("Reine",couleur, x, y);
+		
+	}
+	
+	public String toString() {
+	
+		if(couleur==1)
+		{
+		return "\u2655 ";
+		}
+		return "\u265B ";
 	}
 
 }

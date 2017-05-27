@@ -1,42 +1,24 @@
 
-public abstract class Piece {//Classed mére
-	boolean couleur;//Couleur de la piéce
-	int x,y;//Position dans le quelle la piece se trouve
-	String nom;//Nom de la piece
+
+public abstract class Piece {
+	protected int couleur;
+	protected String nom;
+	protected Position position;
 	
-//Constructeur
-	
-	public Piece(boolean coul,int x,int y,String nom){
-		setcouleur(coul);
-		setposition(x,y);
-		setnom(nom);
-	}
-	
-	public String getnom(){
-		return nom;
-	}
-	
-	public void setnom(String nom){
+	public Piece(String nom,int couleur,int x,int y){
+		this.couleur=couleur;
 		this.nom=nom;
+		this.position=new Position(x,y);
 	}
-	
-	public int getpositionabs(){
-		return x;
-	}
-	public int getpositionord(){
-		return y;
-	}
-	
-	public void setposition(int l,int m){
-		this.x=l;
-		this.y=m;
-	}
-	
-	public boolean getcoul(){
-		return couleur;
-	}
-	
-	public void setcouleur(boolean coul){
-		this.couleur=coul;
-	}
+public int Getcouleur(){
+	return couleur;
+}
+public String Getnom(){
+	return nom;
+}
+public Position Getpositon(){
+	return position;
+}
+public abstract String toString();
+
 }

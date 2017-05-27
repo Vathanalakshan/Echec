@@ -1,10 +1,19 @@
 
+
 public class Tour extends Piece {
-	 
-	public Tour(boolean coul, int x,int y,String nom) {
-		super(coul,x,y,nom);
-		// TODO Auto-generated constructor stub
+	public Tour(int couleur,int x,int y){
+		super("Tour",couleur, x, y);
+		
 	}
 	
+	public String toString() {
+	
+		if(couleur==1)
+		{
+
+			return "\u2656 ";
+			}
+			return "\u265C ";
+	}
 
 }

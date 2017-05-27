@@ -1,36 +1,61 @@
 
-public class Case {
-	public int ligne;
-	public int colonne;
-	public Piece piece;
-	
-	public Case(int ligne , int colonne,Piece p){
-		this.ligne=ligne;
-		this.colonne=colonne;
-		this.piece=p;
-	}
-	
-	public void setligne(int ligne){
-		this.ligne=ligne;
-	}
 
-	public void setcolonne(int colonne){
-		this.colonne=colonne;
+public class Case {
+	/**
+	 * Piece contenu par la case
+	 */
+	private Piece piece;
+	
+	/**
+	 * Constructeur par defaut
+	 */
+	public Case()
+	{
+		
 	}
 	
-	public int getligne(){
-		return this.ligne;
+	/**
+	 * Constructeur parametre
+	 * @param Prend en parametre la piece qu'il y aura sur la case
+	 */
+	public Case(Piece piece)
+	{
+		this.piece = piece;
 	}
 	
-	public int getcolonne(){
-		return this.colonne;
+	/**
+	 * Methode get piece, retourne la piece qui se trouve sur la case, ou null si la case est vide
+	 * @return Piece sur la case
+	 */
+	public Piece getPiece() {
+		return piece;
 	}
 	
-	public void  setpiece(Piece p){
-		this.piece=p;
+	/**
+	 * Methode set piece, met un objet Piece sur la case
+	 * @param Piece ˆ placer
+	 */
+	public void setPiece(Piece piece) {
+		this.piece = piece;
 	}
 	
-	public Piece getpiece(){
-		return this.piece;
+	/**
+	 * Methode estOccupe servant a savoir si la case est occupe ou non.
+	 * @return Boolean
+	 */
+	public boolean estOccupe()
+	{
+		return (piece != null);	
 	}
+	
+	/**
+	 * Methode estOccupe servant a savoir si la case est occupe ou non d'une piece d'une couleur entrer en parametre.
+	 * @return Boolean
+	 * @param String
+	 */
+	public String toString(){
+		String g=piece.toString();
+		return g;
+	}
+	
 }
