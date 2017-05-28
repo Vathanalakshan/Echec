@@ -53,6 +53,16 @@ public class Case {
 	 * @return Boolean
 	 * @param String
 	 */
+	
+	public boolean estOccupe(int couleur)
+	{
+		if (piece == null)
+			return false;
+		else
+			return (piece.Getcouleur()==couleur);
+	}
+	
+	
 	public String toString(){
 		String g=piece.toString();
 		return g;

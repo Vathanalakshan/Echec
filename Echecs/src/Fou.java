@@ -10,9 +10,16 @@ public class Fou extends Piece {
 	
 		if(couleur==1)
 		{
-		return "\u2656 ";
+		return "\u2657 ";
 		}
-		return "\u265C ";
+		return "\u265D ";
+	}
+	
+	public boolean EstValide(Deplacement deplacement) {
+		
+		return Math.abs(deplacement.GetDeplacementX()) - Math.abs(deplacement.GetDeplacementY()) == 0 && !deplacement.DeplacementNull();
+		
 	}
 
 }
+

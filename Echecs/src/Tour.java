@@ -10,9 +10,16 @@ public class Tour extends Piece {
 	
 		if(couleur==1)
 		{
-		return "\u2657 ";
+		return "\u2656 ";
 		}
-		return "\u265D ";
+		return "\u265C ";
+	}
+	
+	public boolean EstValide(Deplacement deplacement) {
+		
+		return deplacement.GetDeplacementX() * deplacement.GetDeplacementY() == 0 && !deplacement.DeplacementNull();
 	}
 
+
 }
+
