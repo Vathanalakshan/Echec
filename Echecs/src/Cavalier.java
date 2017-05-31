@@ -7,14 +7,20 @@ public class Cavalier extends Piece {
 		
 	}
 	
+
+	
 	public String toString() {
 	
 		if(couleur==1)
 		{
 		return "\u2658";
 		}
-		return "\u265E ";
+		return "\u265E";
 	}
-	
+	public boolean EstValide(Deplacement deplacement) {
+		
+		return (Math.abs(deplacement.GetDeplacementX() / deplacement.GetDeplacementY())) == 2 |
+				(Math.abs(deplacement.GetDeplacementX() / deplacement.GetDeplacementY())) == .5;
+	}
 
 }

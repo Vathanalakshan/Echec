@@ -10,9 +10,9 @@ public class Tour extends Piece {
 	
 		if(couleur==1)
 		{
-		return "\u2656 ";
+		return "\u2656";
 		}
-		return "\u265C ";
+		return "\u265C";
 	}
 	
 	public boolean EstValide(Deplacement deplacement) {

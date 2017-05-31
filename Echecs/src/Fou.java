@@ -10,9 +10,9 @@ public class Fou extends Piece {
 	
 		if(couleur==1)
 		{
-		return "\u2657 ";
+		return "\u2657";
 		}
-		return "\u265D ";
+		return "\u265D";
 	}
 	
 	public boolean EstValide(Deplacement deplacement) {

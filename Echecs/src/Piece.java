@@ -5,6 +5,7 @@ public abstract class Piece {
 	protected String nom;
 	protected Position position;
 	
+	
 	public Piece(String nom,int couleur,int x,int y){
 		this.couleur=couleur;
 		this.nom=nom;
@@ -20,5 +21,6 @@ public Position Getpositon(){
 	return position;
 }
 public abstract String toString();
+public abstract boolean EstValide(Deplacement deplacement);
 
 }
