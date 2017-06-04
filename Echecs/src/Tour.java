@@ -15,11 +15,14 @@ public class Tour extends Piece {
 		return "\u265C";
 	}
 	
-	public boolean EstValide(Deplacement deplacement) {
-		
-		return deplacement.GetDeplacementX() * deplacement.GetDeplacementY() == 0 && !deplacement.DeplacementNull();
-	}
-
-
+	public boolean moveValable(int xi,int yi,int xf,int yf){//i=initial f=final x,y position
+		for (int i=0;i<8;i++){
+			if (((xf==xi)&&(yf==yi+i))||(yf==yi-i))// deplacement vertical
+				return true;
+			if (((xf==xi+i)||(xf==xi-i))&&(yf==yi))// deplacement horizantal
+				return true;
+		}
+		return false;
+}
 }
 

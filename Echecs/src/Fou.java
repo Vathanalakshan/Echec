@@ -15,11 +15,12 @@ public class Fou extends Piece {
 		return "\u265D";
 	}
 	
-	public boolean EstValide(Deplacement deplacement) {
-		
-		return Math.abs(deplacement.GetDeplacementX()) - Math.abs(deplacement.GetDeplacementY()) == 0 && !deplacement.DeplacementNull();
-		
+	public boolean moveValable(int xi,int yi,int xf,int yf){//i=initial f=final x,y position
+		for (int i=0;i<8;i++){
+			if(((xf==xi+i)||(xf==xi-i)) && ((yf==yi+i)||(yf==yi-i)))
+				return true;
+		}
+		return false;
 	}
-
 }
 

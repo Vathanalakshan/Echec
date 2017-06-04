@@ -15,23 +15,23 @@ public class Pion extends Piece {
 		return "\u265F";
 	}
 	
-	public boolean EstValide(Deplacement deplacement) {
-		
-			
-		if (deplacement.GetDeplacementX() == 0){
-			if (super.couleur==1){
-				
-				return deplacement.GetDeplacementY() <= (deplacement.Getdepart().Getligne() == 1 ? 2 : 1) && deplacement.GetDeplacementY() > 0;
-			}
-			else {
-				
-	return deplacement.GetDeplacementY() >= (deplacement.Getdepart().Getligne() == 6 ? -2 : -1) && deplacement.GetDeplacementY() < 0;
-			}
-	
-			
+	public boolean moveValable(int xi,int yi,int xf,int yf){//i=initial f=final x,y position
+		if(couleur==1 && xi==1){//pion blanc sur la ligne 1:cad premier move
+			if((xf==xi+2||xf==xi+1)&&(yf==yi))//
+					return true;
+		if(couleur==0 && xi==6){//pion noir sur la ligne 6:cad premier move
+			if((xf==xi-2||xf==xi-1)&&(yf==yi))
+					return true;
+		}
+		if (couleur==1){//deplacement du pion normal sans elimier un autre piece
+			if((xf==xi+1)&&(yf==yi))
+				return true;
+		}
+		if (couleur==0){//deplacement du pion normal sans eliminer un autre pice
+			if((xf==xi-1)&&(yf==yi))
+				return true;
+		}
 	}
 		return false;
-}
-
-	
+		}
 }

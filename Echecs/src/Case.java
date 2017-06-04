@@ -1,60 +1,32 @@
 package projet_echecs;
 
-public class Case {
-	/**
-	 * Piece contenu par la case
-	 */
-	private Piece piece;
+
+public class Case {//Class case qui va contenir une piece
 	
-	/**
-	 * Constructeur par defaut
-	 */
+	private Piece piece;//piece
+	
 	public Case()
 	{
 		
 	}
 	
-	/**
-	 * Constructeur parametre
-	 * @param Prend en parametre la piece qu'il y aura sur la case
-	 */
 	public Case(Piece piece)
 	{
 		this.piece = piece;
 	}
-	
-	/**
-	 * Methode get piece, retourne la piece qui se trouve sur la case, ou null si la case est vide
-	 * @return Piece sur la case
-	 */
-	public Piece getPiece() {
+		public Piece getPiece() {//recuperer piece qui est dans la case
 		return piece;
 	}
 	
-	/**
-	 * Methode set piece, met un objet Piece sur la case
-	 * @param Piece ˆ placer
-	 */
-	public void setPiece(Piece piece) {
+	public void setPiece(Piece piece) {//mettre une piece dans la case
 		this.piece = piece;
 	}
-	
-	/**
-	 * Methode estOccupe servant a savoir si la case est occupe ou non.
-	 * @return Boolean
-	 */
-	public boolean estOccupe()
+	public boolean estOccupe()//savoir la case est occupé par n'importe quelle piece
 	{
 		return (piece != null);	
 	}
 	
-	/**
-	 * Methode estOccupe servant a savoir si la case est occupe ou non d'une piece d'une couleur entrer en parametre.
-	 * @return Boolean
-	 * @param String
-	 */
-	
-	public boolean estOccupe(int couleur)
+	public boolean estOccupe(int couleur)//verif si case occupéé par une piece par le couleur indiquée en parametre
 	{
 		if (piece == null)
 			return false;
@@ -63,9 +35,10 @@ public class Case {
 	}
 	
 	
-	public String toString(){
+	public String toString(){ // retourne nom de la pice
 		String g=piece.toString();
 		return g;
 	}
-	
+
+
 }

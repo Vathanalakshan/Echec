@@ -21,6 +21,5 @@ public Position Getpositon(){
 	return position;
 }
 public abstract String toString();
-public abstract boolean EstValide(Deplacement deplacement);
-
+public abstract boolean moveValable(int xi,int yi,int xf,int yf);
 }

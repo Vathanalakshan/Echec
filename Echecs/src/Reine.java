@@ -15,10 +15,15 @@ public class Reine extends Piece {
 		return "\u265B";
 	}
 	
-	public boolean EstValide(Deplacement deplacement) {
-		
-		return (Math.abs(deplacement.GetDeplacementX()) - Math.abs(deplacement.GetDeplacementY()) == 0 
-				| deplacement.GetDeplacementX() * deplacement.GetDeplacementY() == 0) && !deplacement.DeplacementNull();
+	public boolean moveValable(int xi,int yi,int xf,int yf){//i=initial f=final x,y position
+		for (int i=0;i<8;i++){
+			if(((xf==xi+i)||(xf==xi-i)) && ((yf==yi+i)||(yf==yi-i)))//deplacement diagonales
+				return true;
+			if (((xf==xi)&&(yf==yi+i))||(yf==yi-i))//deplacement vertical
+				return true;
+			if (((xf==xi+i)||(xf==xi-i))&&(yf==yi))//deplacement horizantal
+				return true;
+		}
+		return false;
 	}
-
 }
