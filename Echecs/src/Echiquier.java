@@ -17,8 +17,14 @@ public class Echiquier {
 	 	
 public boolean cheminLibre(int xi,int yi,int xf,int yf){
 	 		
-	 		if (getEchi()[xi][yi].getPiece() instanceof Cavalier){return true;}
-	 		
+	 		if (getEchi()[xi][yi].getPiece() instanceof Roi || getEchi()[xi][yi].getPiece() instanceof Cavalier){return true;}
+	 		int couleur=getEchi()[xi][yi].getPiece().Getcouleur();
+	 		if(getEchi()[xf][yf].getPiece()!=null){
+	 		if(getEchi()[xf][yf].getPiece().Getcouleur()==couleur){
+	 			return false;
+	 
+	 		}
+	 		}
 	 		int distx=xf-xi;//Distance entre deux case
 	 		int disty=yf-yi;//Distance entre deux case
 	 		
@@ -36,8 +42,8 @@ public boolean cheminLibre(int xi,int yi,int xf,int yf){
 	 		if (disty==0){//deplacement vertical
 	 			cntrx=cntrx+dx;
 	 			for(int i=1;i<Math.abs(distx);i++){		
-	 			 if( echi[cntrx][cntry]!=null){
-	 				 System.out.print("nope");
+	 			 if(echi[cntrx][cntry].getPiece()!=null){
+	 				 System.out.println("Chemin vertical nonlibre");
 	 				 return false;
 	 			 }
 	 			 cntrx=cntrx+dx;
@@ -46,37 +52,45 @@ public boolean cheminLibre(int xi,int yi,int xf,int yf){
 	 		
 	 		if (distx==0){//deplacement horizantal
 	 			cntry=cntry+dy;
-	 			for(int i=1;i<Math.abs(distx);i++){
-	 			 if( echi[cntrx][cntry]!=null){
-	 				 System.out.print("nope1");
+	 			for(int i=1;i<Math.abs(disty);i++){
+	 			 if( echi[cntrx][cntry].getPiece()!=null){
+	 				 System.out.println("Chemin horizontal nonlibre");
 	 				 return false;
 	 			 }
 	 			 cntry=cntry+dy;
 	 			}
 	 		}
-	 		if (distx!=0 && distx!=0){//deplacement diagonale
+	 		if (distx!=0 && disty!=0){//deplacement diagonale
 	 			cntrx=cntrx+dx;
 	 			cntry=cntry+dy;
-				 System.out.print(cntrx);
- 				 System.out.print(cntry);
+				 System.out.println(cntrx);
+ 				 System.out.println(cntry);
 
 	 			for(int i=1;i<Math.abs(distx);i++){
-	 				 System.out.print("x");
+	 			 if( echi[cntrx][cntry].getPiece()!=null){
 
-	 			 if( echi[cntrx][cntry]!=null){
-	 				 System.out.print("nope2");
+	 				 System.out.println(echi[cntrx][cntry].getPiece());
+	 				 System.out.println("Chemin diagonale nonlibre");
 	 				 return false;
 	 			 }
+				 System.out.println(cntrx);
+ 				 System.out.println(cntry);
 	 			 cntrx=cntrx+dx;
 	 			 cntry=cntry+dy;
 	 			}
 	 		}
-			 System.out.print("ok");
-
 	 		return true;
 
 	 		}
-	 	
+
+	 	public boolean memeCouleur(int xi,int xf,int yi,int yf){
+	 		int a=(getEchi()[xi][yi].getPiece().Getcouleur());
+	 		int b=(getEchi()[xf][yf].getPiece().Getcouleur());
+	 		if(a==b){
+ 				System.out.println("Les cases de départ et arrivée contiennt une piece de la meme couleur");
+ 				return false;}
+	 		return true;
+	 	}	 	
 /**
  * Methode capture par un pion possible, verifie si le deplacement d'un pion en diagonale est valide.
  * Donc, il verifie si une piece d'une couleur contraire au pion se trouve a sa diagonale, si oui, le deplacement
@@ -100,12 +114,22 @@ public boolean captureParUnPionPossible(int xi,int yi,int xf,int yf) {
 			 */
 			if((xf==xi+1) && (yf==yi+1) && couleurDepart==1)
 				return true;
-		if((xf==xi-1) && (yf==yi-1) && couleurDepart==1)
+		if((xf==xi-1) && (yf==yi-1) && couleurDepart==0)
 			return true;
 	}
 	return false;
 	
 }
+		public boolean Peutetredeplacer(int xi,int yi,int xf,int yf){
+			if (getEchi()[xi][yi].getPiece().moveValable(xi,yi,xf,yf)==true   && cheminLibre(xi,yi,xf,yf)){//verfie le deplacement est valable pour la piece
+	 			return true;
+	 		}
+	 		else if(getEchi()[xi][yi].getPiece() instanceof Pion && captureParUnPionPossible(xi,yi,xf,yf) ){
+	 			return true;
+	 		}
+	 		else 
+	 			return false;
+		}
 
 
 	 	
@@ -116,7 +140,12 @@ public boolean captureParUnPionPossible(int xi,int yi,int xf,int yf) {
 	 			Piece temp=getEchi()[xi][yi].getPiece();
 	 			getEchi()[xf][yf].setPiece(temp);//met la piece qui est dans les coordonnéée inital dans le coordonnéé nouvelle
 	 			getEchi()[xi][yi].setPiece(null);//detruit la piece qui etait dans la coordonnée initiales
-
+	 		
+	 		}
+	 		else if(getEchi()[xi][yi].getPiece() instanceof Pion && captureParUnPionPossible(xi,yi,xf,yf) ){
+	 			Piece temp1=getEchi()[xi][yi].getPiece();
+	 			getEchi()[xf][yf].setPiece(temp1);//met la piece qui est dans les coordonnéée inital dans le coordonnéé nouvelle
+	 			getEchi()[xi][yi].setPiece(null);//detruit la piece qui etait dans la coordonnée initiales
 	 		}
 	 		else 
 	 			System.out.println("deplacement impossible");

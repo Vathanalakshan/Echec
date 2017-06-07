@@ -35,6 +35,7 @@ public class Case {//Class case qui va contenir une piece
 	}
 	
 	
+	
 	public String toString(){ // retourne nom de la pice
 		String g=piece.toString();
 		return g;
