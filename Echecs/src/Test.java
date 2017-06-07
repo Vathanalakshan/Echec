@@ -6,7 +6,7 @@ public class Test {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+	String historique = "";	
 	Echiquier ex=new Echiquier();
 	System.out.print(ex);
 	System.out.print('\n');
@@ -22,16 +22,17 @@ public class Test {
 	 		String str2=sc.nextLine();
 	 		
 	 		while(str.length()!=2 || str2.length()!=2 || (int)str.charAt(0)<65 || (int)str.charAt(0)>72 || (int)str2.charAt(0)>72 || (int)str2.charAt(0)<65 ||
-	 				(int)str.charAt(1)<49 || (int)str2.charAt(1)<49 || (int)str.charAt(1)>57 || (int)str2.charAt(1)>57 || ex.getEchi()[(int)str.charAt(0)-65][(int)str.charAt(1)-49].estOccupe(0)|| !ex.Peutetredeplacer((int)str.charAt(0)-65,(int)str.charAt(1)-49,(int)str2.charAt(0)-65,(int)str2.charAt(1)-49)){
+	 				(int)str.charAt(1)<49 || (int)str2.charAt(1)<49 || (int)str.charAt(1)>57 || (int)str2.charAt(1)>57 || ex.getEchi()[(int)str.charAt(1)-49][(int)str.charAt(0)-65].estOccupe(0)|| !ex.Peutetredeplacer((int)str.charAt(1)-49,(int)str.charAt(0)-65,(int)str2.charAt(1)-49,(int)str2.charAt(0)-65)){
 	 			System.out.println("saisie incorrecte ou deplacement impossible recommencer");
-	 			System.out.println("quel piece voulez vous deplacer :");
+	 			System.out.println("quel piece voulez vous deplacer :");																									
 		 		str=sc.nextLine();
 		 		System.out.println("ou voulez vous la deplacer :");
 		 		str2=sc.nextLine();
 	 			
 	 		}
+	 		historique=historique+" blanc: deplacement "+ex.getEchi()[(int)str.charAt(1)-49][(int)str.charAt(0)-65].getPiece().Getnom()+" "+ str +" en " + str2 + "\n";
+	 		ex.deplacer((int)str.charAt(1)-49,(int)str.charAt(0)-65,(int)str2.charAt(1)-49,(int)str2.charAt(0)-65);
 	 		
-	 		ex.deplacer((int)str.charAt(0)-65,(int)str.charAt(1)-49,(int)str2.charAt(0)-65,(int)str2.charAt(1)-49);
 		}
 		else{
 		System.out.println("c'est au tour des noirs de jouer:");
@@ -44,7 +45,7 @@ public class Test {
  		
  		while((int)str_noir.charAt(0)<65 || (int)str_noir.charAt(0)>72 || (int)str2_noir.charAt(0)>72 || (int)str2_noir.charAt(0)<65 ||
  				(int)str_noir.charAt(1)<49 || (int)str2_noir.charAt(1)<49 || (int)str_noir.charAt(1)>57 || (int)str2_noir.charAt(1)>57 || 
- 				ex.getEchi()[(int)str_noir.charAt(0)-65][(int)str2_noir.charAt(1)-49].estOccupe(1) || !ex.Peutetredeplacer((int)str_noir.charAt(0)-65,(int)str_noir.charAt(1)-49,(int)str2_noir.charAt(0)-65,(int)str2_noir.charAt(1)-49) ){
+ 				ex.getEchi()[(int)str2_noir.charAt(1)-49][(int)str_noir.charAt(0)-65].estOccupe(1) || !ex.Peutetredeplacer((int)str_noir.charAt(1)-49,(int)str_noir.charAt(0)-65,(int)str2_noir.charAt(1)-49,(int)str2_noir.charAt(0)-65) ){
  			
  			
  			System.out.println("saisie incorrecte ou deplacement impossible recommencer");
@@ -55,10 +56,12 @@ public class Test {
  			
  		}
  		
- 		ex.deplacer((int)str_noir.charAt(0)-65,(int)str_noir.charAt(1)-49,(int)str2_noir.charAt(0)-65,(int)str2_noir.charAt(1)-49);
-		}
+ 		historique=historique + "noir: deplacement "+ex.getEchi()[(int)str_noir.charAt(1)-49][(int)str_noir.charAt(0)-65].getPiece().Getnom()+" "+ str_noir +" en " + str2_noir +"\n";
+ 		ex.deplacer((int)str_noir.charAt(1)-49,(int)str_noir.charAt(0)-65,(int)str2_noir.charAt(1)-49,(int)str2_noir.charAt(0)-65);
  		
+		}
  		ex.afficher();
+ 		System.out.println(historique);
 	i++;
 		
 	}

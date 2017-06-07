@@ -16,9 +16,20 @@ public class Echiquier {
 	 	}
 	 	
 public boolean cheminLibre(int xi,int yi,int xf,int yf){
-	 		
-	 		if (getEchi()[xi][yi].getPiece() instanceof Roi || getEchi()[xi][yi].getPiece() instanceof Cavalier){return true;}
-	 		int couleur=getEchi()[xi][yi].getPiece().Getcouleur();
+	
+	
+			int couleur=getEchi()[xi][yi].getPiece().Getcouleur();
+	 		if (getEchi()[xi][yi].getPiece() instanceof Roi || getEchi()[xi][yi].getPiece() instanceof Cavalier){
+	 			if(getEchi()[xf][yf].getPiece()!=null){
+	 		 		if(getEchi()[xf][yf].getPiece().Getcouleur()==couleur){
+	 		 			return false;
+	 		 
+	 		 		}
+	 		 		}
+	 			
+	 			return true;
+	 			
+	 		}
 	 		if(getEchi()[xf][yf].getPiece()!=null){
 	 		if(getEchi()[xf][yf].getPiece().Getcouleur()==couleur){
 	 			return false;
@@ -121,14 +132,17 @@ public boolean captureParUnPionPossible(int xi,int yi,int xf,int yf) {
 	
 }
 		public boolean Peutetredeplacer(int xi,int yi,int xf,int yf){
+			if(getEchi()[xi][xf].getPiece()==null){return false;}
 			if (getEchi()[xi][yi].getPiece().moveValable(xi,yi,xf,yf)==true   && cheminLibre(xi,yi,xf,yf)){//verfie le deplacement est valable pour la piece
 	 			return true;
 	 		}
 	 		else if(getEchi()[xi][yi].getPiece() instanceof Pion && captureParUnPionPossible(xi,yi,xf,yf) ){
 	 			return true;
 	 		}
+			
 	 		else 
 	 			return false;
+			
 		}
 
 
@@ -155,106 +169,108 @@ public boolean captureParUnPionPossible(int xi,int yi,int xf,int yf) {
 	 
 	 		
 	 	public void lancer(){
-	 		getEchi()[0][0].setPiece(new Tour(1,0,0)); 
-	 		getEchi()[0][1].setPiece(new Cavalier(1,0,1));
-	 		getEchi()[0][2].setPiece(new Fou(1,0,2));
-	 		getEchi()[0][3].setPiece(new Reine(1,0,3));
-	 		getEchi()[0][4].setPiece(new Roi(1,0,4));
-	 		getEchi()[0][5].setPiece(new Fou(1,0,5));
-	 		getEchi()[0][6].setPiece(new Cavalier(1,0,6));
-	 		getEchi()[0][7].setPiece(new Tour(1,0,7));
+	 		getEchi()[0][0].setPiece(new Tour(0,0,0)); 
+	 		getEchi()[0][1].setPiece(new Cavalier(0,0,1));
+	 		getEchi()[0][2].setPiece(new Fou(0,0,2));
+	 		getEchi()[0][3].setPiece(new Reine(0,0,3));
+	 		getEchi()[0][4].setPiece(new Roi(0,0,4));
+	 		getEchi()[0][5].setPiece(new Fou(0,0,5));
+	 		getEchi()[0][6].setPiece(new Cavalier(0,0,6));
+	 		getEchi()[0][7].setPiece(new Tour(0,0,7));
 
-	 		getEchi()[1][0].setPiece(new Pion(1,1,7));
-	 		getEchi()[1][1].setPiece(new Pion(1,1,7));
-	 		getEchi()[1][2].setPiece(new Pion(1,1,7));
-	 		getEchi()[1][3].setPiece(new Pion(1,1,7));
-	 		getEchi()[1][4].setPiece(new Pion(1,1,7));
-	 		getEchi()[1][5].setPiece(new Pion(1,1,7));
-	 		getEchi()[1][6].setPiece(new Pion(1,1,7));
-	 		getEchi()[1][7].setPiece(new Pion(1,1,7));
+	 		getEchi()[1][0].setPiece(new Pion(0,1,7));
+	 		getEchi()[1][1].setPiece(new Pion(0,1,7));
+	 		getEchi()[1][2].setPiece(new Pion(0,1,7));
+	 		getEchi()[1][3].setPiece(new Pion(0,1,7));
+	 		getEchi()[1][4].setPiece(new Pion(0,1,7));
+	 		getEchi()[1][5].setPiece(new Pion(0,1,7));
+	 		getEchi()[1][6].setPiece(new Pion(0,1,7));
+	 		getEchi()[1][7].setPiece(new Pion(0,1,7));
 	 
-	 		getEchi()[6][0].setPiece(new Pion(0,0,7));
-	 		getEchi()[6][1].setPiece(new Pion(0,0,7));
-	 		getEchi()[6][2].setPiece(new Pion(0,0,7));
-	 		getEchi()[6][3].setPiece(new Pion(0,0,7));
-	 		getEchi()[6][4].setPiece(new Pion(0,0,7));
-	 		getEchi()[6][5].setPiece(new Pion(0,0,7));
-	 		getEchi()[6][6].setPiece(new Pion(0,0,7));
-	 		getEchi()[6][7].setPiece(new Pion(0,0,7));
+	 		getEchi()[6][0].setPiece(new Pion(1,0,7));
+	 		getEchi()[6][1].setPiece(new Pion(1,0,7));
+	 		getEchi()[6][2].setPiece(new Pion(1,0,7));
+	 		getEchi()[6][3].setPiece(new Pion(1,0,7));
+	 		getEchi()[6][4].setPiece(new Pion(1,0,7));
+	 		getEchi()[6][5].setPiece(new Pion(1,0,7));
+	 		getEchi()[6][6].setPiece(new Pion(1,0,7));
+	 		getEchi()[6][7].setPiece(new Pion(1,0,7));
 	 
 	 	
 
-	 		getEchi()[7][0].setPiece(new Tour(0,0,0));
-	 		getEchi()[7][1].setPiece(new Cavalier(0,0,1));
-	 		getEchi()[7][2].setPiece(new Fou(0,0,2));
-	 		getEchi()[7][3].setPiece(new Reine(0,0,3));
-	 		getEchi()[7][4].setPiece(new Roi(0,0,4));
-	 		getEchi()[7][5].setPiece(new Fou(0,0,5));
-	 		getEchi()[7][6].setPiece(new Cavalier(0,0,6));
-	 		getEchi()[7][7].setPiece(new Tour(0,0,7));
+	 		getEchi()[7][0].setPiece(new Tour(1,0,0));
+	 		getEchi()[7][1].setPiece(new Cavalier(1,0,1));
+	 		getEchi()[7][2].setPiece(new Fou(1,0,2));
+	 		getEchi()[7][3].setPiece(new Reine(1,0,3));
+	 		getEchi()[7][4].setPiece(new Roi(1,0,4));
+	 		getEchi()[7][5].setPiece(new Fou(1,0,5));
+	 		getEchi()[7][6].setPiece(new Cavalier(1,0,6));
+	 		getEchi()[7][7].setPiece(new Tour(1,0,7));
 	 		
 	 	}
 	  	
 	 	public void afficher(){
 
-	 		
+
 	 		int cpt = 0;
-	 		
+
 	 		for(int i=0;i<8;i++){
 	 			if(i==0)
-		 			System.out.print("    1   2   3   4   5   6   7   8 ");
+		 			System.out.print("     A    B    C    D    E    F    G    H \n"+ "  ┌────┬────┬────┬────┬────┬────┬────┬────┐");
 	 			if(i>=1){
-		 			System.out.print("|");
+		 			System.out.print("\n  ├────┼────┼────┼────┼────┼────┼────┼────┤");
 
 	 			}
-	 			
+
 	 			System.out.print("\n");
 	 			for(int j=0;j<8;j++){
 	 				if(i==0 && cpt == 0){
-	 					System.out.print("A ");
+	 					System.out.print("1 │");
 	 				cpt++;
 	 				}
 	 				if(i==1 && cpt == 1){
-	 					System.out.print("B ");
+	 					System.out.print("2 │");
 	 				cpt++;
 	 				}
 	 				if(i==2 && cpt == 2){
-	 					System.out.print("C ");
+	 					System.out.print("3 │");
 	 				cpt++;
 	 				}
 	 				if(i==3 && cpt == 3){
-	 					System.out.print("D ");
+	 					System.out.print("4 │");
 	 				cpt++;
 	 				}
 	 				if(i==4 && cpt == 4){
-	 					System.out.print("E ");
+	 					System.out.print("5 │");
 	 				cpt++;
 	 				}
 	 				if(i==5 && cpt == 5){
-	 					System.out.print("F ");
+	 					System.out.print("6 │");
 	 				cpt++;
 	 				}
 	 				if(i==6 && cpt == 6){
-	 					System.out.print("G ");
+	 					System.out.print("7 │");
 	 				cpt++;
 	 				}
 	 				if(i==7 && cpt == 7){
-	 					System.out.print("H ");
+	 					System.out.print("8 │");
 	 				cpt++;
 	 				}
 	 				if(!getEchi()[i][j].estOccupe()){
-	 					System.out.print("| - ");
+	 					System.out.print("    │");
 	 				}
 	 				if(getEchi()[i][j].getPiece()!=null){
 
 	 				String k=getEchi()[i][j].toString();
-	 				System.out.print("| "+k+ " ");
+	 				System.out.print("      "+k+ "    │");
 }
-	 
+
 	 	   }
-	 
+
 	 	}
-				System.out.print("|\n\n");
+				System.out.print("\n  └────┴────┴────┴────┴────┴────┴────┴────┘");
+				System.out.print("\n\n");
+				
 
 	 	}
 
