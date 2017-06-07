@@ -11,71 +11,111 @@ public class Echiquier {
 	 				this.getEchi()[i][j]=new Case(); //Placement des cases sur l'echiquier
 	 			}
 	 		}
-	 		lancer(); //Placement des pi�ces dans les cases de l'�chiquier
+	 		lancer(); //Placement des pièces dans les cases de l'échiquier
 	 		afficher();
-	 		deplacer(0, 0, 1, 0);
 	 	}
 	 	
-	 	public boolean cheminlibre(int xi,int xf,int yi,int yf){//chemin libre a utiliser pour fou/tour/reine
-	 		if(xi==xf){//deplacement horizantale
-	 			if (yf-yi>0){//deplacement de gauche a droite
-	 				for(int i=1;i<(yf-yi);i++)//nombre de case a verifier si c vide
-	 					if(getEchi()[xi][yi+i].estOccupe()==true)//verfi si case occup�
-	 						return false;
-	 			}
-	 			if (yf-yi<0){// deplacement de droite a gauche
-	 				for(int i=1;i<(yi-yf);i++){//nmbre de case a verifer si vide
-	 					if(getEchi()[xi][yf-i].estOccupe()==true)//verifie si case occup�
-	 						return false;
-	 				}
-	 			}
-	 		}
-	 			if(yi==yf){//deplacement vertical
-		 			if (xf-xi>0){//deplamcemet de haut vers bas
-		 				for(int i=1;i<(xf-xi);i++)//nbre de case a verifier
-		 					if(getEchi()[xi+i][yi].estOccupe()==true)//verifie si case occup�
-		 						return false;
-		 			}
-		 			if (xf-xi<0){//deplacement bas vers haut
-		 				for(int i=1;i<(xi-xf);i++){//nbre de case a verifier
-		 					if(getEchi()[xf-i][yf].estOccupe()==true)//verifie si case occup�
-		 						return false;
-		 				}
-		 			}}
-	 		if(xf-xi>0 && yf-yi>0){//deplacement diagonale ver bas et droite
-	 			for(int i=1;i<(xf-xi);i++)
-	 				if(getEchi()[xi+i][yi+i].estOccupe()==true)
-	 					return true;
-	 		}
-	 		if(xf-xi<0 && yf-yi<0){//deplacement diagonale vers  haut et gauche
-	 			for(int i=1;i<(xi-xf);i++)
-	 			if(getEchi()[xi-i][yi-i].estOccupe()==true)
-	 				return true;
-	 		}
-	 		if(xf-xi<0 && yf-yi>0){//deplacement diagonale ver haut et droit
-	 			for(int i=1;i<(yf-yi);i++){
-	 				if(getEchi()[xi-i][yi+i].estOccupe()==true)
-	 					return true;
+public boolean cheminLibre(int xi,int yi,int xf,int yf){
+	 		
+	 		if (getEchi()[xi][yi].getPiece() instanceof Cavalier){return true;}
+	 		
+	 		int distx=xf-xi;//Distance entre deux case
+	 		int disty=yf-yi;//Distance entre deux case
+	 		
+	 		int dx=0;
+	 		int dy=0;
+	 		
+	 		if (distx>0){dx=1;}//Haut vers bas
+	 		if (distx<0){dx=-1;}//bas vers haut
+	 		if (disty>0){dy=1;}// gauche vers droite
+	 		if (disty<0){dy=-1;}// droite vers gauche
+	 		
+	 		int cntrx=xi;
+	 		int cntry=yi;
+	 		
+	 		if (disty==0){//deplacement vertical
+	 			cntrx=cntrx+dx;
+	 			for(int i=1;i<Math.abs(distx);i++){		
+	 			 if( echi[cntrx][cntry]!=null){
+	 				 System.out.print("nope");
+	 				 return false;
+	 			 }
+	 			 cntrx=cntrx+dx;
 	 			}
 	 		}
-	 		if(xf-xi>0 && yf-yi<0){//deplacement vers bas et gauche
-	 			for(int i=1;i<(xf-xi);i++){
-	 				if(getEchi()[xi+i][yi-i].estOccupe()==true)
-	 					return true;
+	 		
+	 		if (distx==0){//deplacement horizantal
+	 			cntry=cntry+dy;
+	 			for(int i=1;i<Math.abs(distx);i++){
+	 			 if( echi[cntrx][cntry]!=null){
+	 				 System.out.print("nope1");
+	 				 return false;
+	 			 }
+	 			 cntry=cntry+dy;
 	 			}
 	 		}
+	 		if (distx!=0 && distx!=0){//deplacement diagonale
+	 			cntrx=cntrx+dx;
+	 			cntry=cntry+dy;
+				 System.out.print(cntrx);
+ 				 System.out.print(cntry);
 
-	 		return false;
-	 	}
+	 			for(int i=1;i<Math.abs(distx);i++){
+	 				 System.out.print("x");
+
+	 			 if( echi[cntrx][cntry]!=null){
+	 				 System.out.print("nope2");
+	 				 return false;
+	 			 }
+	 			 cntrx=cntrx+dx;
+	 			 cntry=cntry+dy;
+	 			}
+	 		}
+			 System.out.print("ok");
+
+	 		return true;
+
+	 		}
 	 	
+/**
+ * Methode capture par un pion possible, verifie si le deplacement d'un pion en diagonale est valide.
+ * Donc, il verifie si une piece d'une couleur contraire au pion se trouve a sa diagonale, si oui, le deplacement
+ * est accepte
+ * @param Deplacement du pion
+ * @return vrai ou faux si le pion peut manger la piece ou non
+ */
+public boolean captureParUnPionPossible(int xi,int yi,int xf,int yf) {
+	//Je vŽrifie si la pice est un pion
+	if(getEchi()[xi][yi].getPiece() instanceof Pion)
+	{
+		//initialisation des variables dont j'aurai besoin dans mes conditions, ˆ savoir la couleur de la pice de dŽpart et la case d'arrivŽ.
+		Case Arrive = getEchi()[xf][yf];
+		int couleurDepart = getEchi()[xi][yi].getPiece().Getcouleur();
+		
+		//je vŽrifie d'abord si la pice d'arrivŽ existe et si elle est de la couleur contraire de celle de dŽpart.
+		if(!Arrive.estOccupe(couleurDepart))
+			/*Je vérifie si le dŽplacement est valide, 
+			 *Le dŽplacement est valide si le produits du dŽplacement x et y donne 1 si la couleur de dŽpart est noir
+			 *ou -1 si la pice de départ est blanche. 
+			 */
+			if((xf==xi+1) && (yf==yi+1) && couleurDepart==1)
+				return true;
+		if((xf==xi-1) && (yf==yi-1) && couleurDepart==1)
+			return true;
+	}
+	return false;
+	
+}
+
+
 	 	
 	 	public void deplacer(int xi,int yi,int xf,int yf){//i=initial f=final x,y position
  			
 
-	 		if (getEchi()[xi][yi].getPiece().moveValable(xi,yi,xf,yf)==true){//verfie le deplacement est valable pour la piece
+	 		if (getEchi()[xi][yi].getPiece().moveValable(xi,yi,xf,yf)==true   && cheminLibre(xi,yi,xf,yf)){//verfie le deplacement est valable pour la piece
 	 			Piece temp=getEchi()[xi][yi].getPiece();
-	 			getEchi()[xf][yf].setPiece(temp);//met la piece qui est dans les coordonn��e inital dans le coordonn�� nouvelle
-	 			getEchi()[xi][yi].setPiece(null);//detruit la piece qui etait dans la coordonn�e initiales
+	 			getEchi()[xf][yf].setPiece(temp);//met la piece qui est dans les coordonnéée inital dans le coordonnéé nouvelle
+	 			getEchi()[xi][yi].setPiece(null);//detruit la piece qui etait dans la coordonnée initiales
 
 	 		}
 	 		else 
