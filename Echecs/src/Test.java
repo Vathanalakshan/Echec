@@ -22,8 +22,8 @@ public class Test {
 	 		String str2=sc.nextLine();
 	 		
 	 		while(str.length()!=2 || str2.length()!=2 || (int)str.charAt(0)<65 || (int)str.charAt(0)>72 || (int)str2.charAt(0)>72 || (int)str2.charAt(0)<65 ||
-	 				(int)str.charAt(1)<49 || (int)str2.charAt(1)<49 || (int)str.charAt(1)>57 || (int)str2.charAt(1)>57 || ex.getEchi()[(int)str.charAt(0)-65][(int)str.charAt(1)-49].estOccupe(0)){
-	 			System.out.println("saisie incorrecte recommencer");
+	 				(int)str.charAt(1)<49 || (int)str2.charAt(1)<49 || (int)str.charAt(1)>57 || (int)str2.charAt(1)>57 || ex.getEchi()[(int)str.charAt(0)-65][(int)str.charAt(1)-49].estOccupe(0)||!ex.getEchi()[(int)str.charAt(0)-65][(int)str.charAt(1)-49].getPiece().moveValable((int)str.charAt(0)-65,(int)str.charAt(1)-49,(int)str2.charAt(0)-65,(int)str2.charAt(1)-49) || !ex.cheminLibre((int)str.charAt(0)-65,(int)str.charAt(1)-49,(int)str2.charAt(0)-65,(int)str2.charAt(1)-49)){
+	 			System.out.println("saisie incorrecte ou deplacement impossible recommencer");
 	 			System.out.println("quel piece voulez vous deplacer :");
 		 		str=sc.nextLine();
 		 		System.out.println("ou voulez vous la deplacer :");
@@ -43,8 +43,8 @@ public class Test {
  		String str2_noir=sc.nextLine();
  		
  		while((int)str_noir.charAt(0)<65 || (int)str_noir.charAt(0)>72 || (int)str2_noir.charAt(0)>72 || (int)str2_noir.charAt(0)<65 ||
- 				(int)str_noir.charAt(1)<49 || (int)str2_noir.charAt(1)<49 || (int)str_noir.charAt(1)>57 || (int)str2_noir.charAt(1)>57 ){
- 			System.out.println("saisie incorrecte recommencer");
+ 				(int)str_noir.charAt(1)<49 || (int)str2_noir.charAt(1)<49 || (int)str_noir.charAt(1)>57 || (int)str2_noir.charAt(1)>57 || ex.getEchi()[(int)str_noir.charAt(0)-65][(int)str2_noir.charAt(1)-49].estOccupe(1) ||  !ex.getEchi()[(int)str_noir.charAt(0)-65][(int)str_noir.charAt(1)-49].getPiece().moveValable((int)str_noir.charAt(0)-65,(int)str_noir.charAt(1)-49,(int)str2_noir.charAt(0)-65,(int)str2_noir.charAt(1)-49) || !ex.cheminLibre((int)str_noir.charAt(0)-65,(int)str_noir.charAt(1)-49,(int)str2_noir.charAt(0)-65,(int)str2_noir.charAt(1)-49) ){
+ 			System.out.println("saisie incorrecte ou deplacement impossible recommencer");
  			System.out.println("quel piece voulez vous deplacer :");
 	 		str_noir=sc.nextLine();
 	 		System.out.println("ou voulez vous la deplacer :");
