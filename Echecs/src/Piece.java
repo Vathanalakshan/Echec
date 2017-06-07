@@ -1,9 +1,10 @@
-
+package projet_echecs;
 
 public abstract class Piece {
 	protected int couleur;
 	protected String nom;
 	protected Position position;
+	
 	
 	public Piece(String nom,int couleur,int x,int y){
 		this.couleur=couleur;
@@ -20,5 +21,5 @@ public Position Getpositon(){
 	return position;
 }
 public abstract String toString();
-
+public abstract boolean moveValable(int xi,int yi,int xf,int yf);
 }

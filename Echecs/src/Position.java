@@ -1,4 +1,4 @@
-
+package projet_echecs;
 
 public class Position {
 	private int ligne;
