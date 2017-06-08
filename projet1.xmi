@@ -1,0 +1,1344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Code="http:///schemas/Code/_j0WOYEvfEeevYvj3z7wmpg/0" xmlns:JavaExtensions="http:///schemas/JavaExtensions/_jzvKYEvfEeevYvj3z7wmpg/0" xmlns:default="http:///schemas/default/_j0L2UEvfEeevYvj3z7wmpg/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/Code/_j0WOYEvfEeevYvj3z7wmpg/0 Code.profile.xmi#_j49Bl0vfEeevYvj3z7wmpg http:///schemas/JavaExtensions/_jzvKYEvfEeevYvj3z7wmpg/0 JavaExtensions.profile.xmi#_j1Uex0vfEeevYvj3z7wmpg http:///schemas/default/_j0L2UEvfEeevYvj3z7wmpg/0 default.profile.xmi#_j3dz10vfEeevYvj3z7wmpg">
+  <uml:Model xmi:id="_jzU6sEvfEeevYvj3z7wmpg" name="projet1">
+    <eAnnotations xmi:id="_jzVhwEvfEeevYvj3z7wmpg" source="Objing">
+      <contents xmi:type="uml:Property" xmi:id="_jzVhwUvfEeevYvj3z7wmpg" name="exporterVersion">
+        <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVhwkvfEeevYvj3z7wmpg" value="3.0.0"/>
+      </contents>
+    </eAnnotations>
+    <packagedElement xmi:type="uml:Package" xmi:id="_jzVhw0vfEeevYvj3z7wmpg" name="projet_echecs">
+      <packagedElement xmi:type="uml:Class" xmi:id="_jzVhxEvfEeevYvj3z7wmpg" name="Case">
+        <ownedAttribute xmi:id="_jzVhxUvfEeevYvj3z7wmpg" name="piece" visibility="private" type="_jzVi3kvfEeevYvj3z7wmpg" association="_jzVh9EvfEeevYvj3z7wmpg">
+          <ownedComment xmi:id="_jzVhxkvfEeevYvj3z7wmpg">
+            <body>piece</body>
+          </ownedComment>
+          <ownedComment xmi:id="_jzVhx0vfEeevYvj3z7wmpg">
+            <body>//Class case qui va contenir une piece</body>
+          </ownedComment>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVhyEvfEeevYvj3z7wmpg"/>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_jzVhyUvfEeevYvj3z7wmpg" name="Case" visibility="public"/>
+        <ownedOperation xmi:id="_jzVhykvfEeevYvj3z7wmpg" name="Case" visibility="public">
+          <ownedComment xmi:id="_jzVhy0vfEeevYvj3z7wmpg">
+            <body>this.piece = piece;</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzVhzEvfEeevYvj3z7wmpg" name="piece" type="_jzVi3kvfEeevYvj3z7wmpg" isUnique="false">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVhzUvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVhzkvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVhz0vfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_jzVh0EvfEeevYvj3z7wmpg" name="getPiece" visibility="public">
+          <ownedComment xmi:id="_jzVh0UvfEeevYvj3z7wmpg">
+            <body>return piece;</body>
+          </ownedComment>
+          <ownedComment xmi:id="_jzVh0kvfEeevYvj3z7wmpg">
+            <body>//recuperer piece qui est dans la case</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzVh00vfEeevYvj3z7wmpg" type="_jzVi3kvfEeevYvj3z7wmpg" isUnique="false" direction="return">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVh1EvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVh1UvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVh1kvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_jzVh10vfEeevYvj3z7wmpg" name="setPiece" visibility="public">
+          <ownedComment xmi:id="_jzVh2EvfEeevYvj3z7wmpg">
+            <body>//mettre une piece dans la case
+        this.piece = piece;</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzVh2UvfEeevYvj3z7wmpg" name="piece" type="_jzVi3kvfEeevYvj3z7wmpg" isUnique="false">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVh2kvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVh20vfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVh3EvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_jzVh3UvfEeevYvj3z7wmpg" name="estOccupe" visibility="public">
+          <ownedComment xmi:id="_jzVh3kvfEeevYvj3z7wmpg">
+            <body>return (piece != null);</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzVh30vfEeevYvj3z7wmpg" isUnique="false" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVh4EvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVh4UvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVh4kvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_jzVh40vfEeevYvj3z7wmpg" name="estOccupe" visibility="public">
+          <ownedComment xmi:id="_jzVh5EvfEeevYvj3z7wmpg">
+            <body>if (piece == null)
+    return false;
+else
+    return (piece.Getcouleur()==couleur);
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzVh5UvfEeevYvj3z7wmpg" name="couleur" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVh5kvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVh50vfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVh6EvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzVh6UvfEeevYvj3z7wmpg" isUnique="false" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVh6kvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVh60vfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVh7EvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_jzVh7UvfEeevYvj3z7wmpg" name="toString" visibility="public">
+          <ownedComment xmi:id="_jzVh7kvfEeevYvj3z7wmpg">
+            <body>return g;</body>
+          </ownedComment>
+          <ownedComment xmi:id="_jzVh70vfEeevYvj3z7wmpg">
+            <body>// retourne nom de la pice
+        String g=piece.toString();</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzVh8EvfEeevYvj3z7wmpg" isUnique="false" direction="return">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVh8UvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVh8kvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVh80vfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_jzVh9EvfEeevYvj3z7wmpg" memberEnd="_jzVhxUvfEeevYvj3z7wmpg _jzVh9UvfEeevYvj3z7wmpg">
+        <ownedEnd xmi:id="_jzVh9UvfEeevYvj3z7wmpg" visibility="public" type="_jzVhxEvfEeevYvj3z7wmpg" association="_jzVh9EvfEeevYvj3z7wmpg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVh9kvfEeevYvj3z7wmpg"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jzVh90vfEeevYvj3z7wmpg" name="Cavalier">
+        <generalization xmi:id="_jzVh-EvfEeevYvj3z7wmpg" general="_jzVi3kvfEeevYvj3z7wmpg"/>
+        <ownedOperation xmi:id="_jzVh-UvfEeevYvj3z7wmpg" name="Cavalier" visibility="public">
+          <ownedComment xmi:id="_jzVh-kvfEeevYvj3z7wmpg">
+            <body>super(&quot;Cavalier&quot;,couleur, x, y);</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzVh-0vfEeevYvj3z7wmpg" name="couleur" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVh_EvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVh_UvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVh_kvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzVh_0vfEeevYvj3z7wmpg" name="x" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzViAEvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzViAUvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzViAkvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzViA0vfEeevYvj3z7wmpg" name="y" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzViBEvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzViBUvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzViBkvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_jzViB0vfEeevYvj3z7wmpg" name="toString" visibility="public">
+          <ownedComment xmi:id="_jzViCEvfEeevYvj3z7wmpg">
+            <body>return &quot;\u265E&quot;;</body>
+          </ownedComment>
+          <ownedComment xmi:id="_jzViCUvfEeevYvj3z7wmpg">
+            <body>if(couleur==1)
+{
+return &quot;\u2658&quot;;
+}
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzViCkvfEeevYvj3z7wmpg" isUnique="false" direction="return">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzViC0vfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzViDEvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzViDUvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_jzViDkvfEeevYvj3z7wmpg" name="moveValable" visibility="public">
+          <ownedComment xmi:id="_jzViD0vfEeevYvj3z7wmpg">
+            <body>return false;</body>
+          </ownedComment>
+          <ownedComment xmi:id="_jzViEEvfEeevYvj3z7wmpg">
+            <body>//i=initial f=final x,y position
+
+        if ((xf-2==xi||xf+2==xi) &amp;&amp; (yf-1==yi||yf+1==yi ))//deplacement de +/- 2 en x et +/- 1 en y 
+            return true;
+        if ((xf-1==xi||xf+1==xi) &amp;&amp; (yf-2==yi||yf+2==yi ))//deplacementde +/- 1 en x et +/- 2 en y
+            return true;</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzViEUvfEeevYvj3z7wmpg" name="xi" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzViEkvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzViE0vfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzViFEvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzViFUvfEeevYvj3z7wmpg" name="yi" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzViFkvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzViF0vfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzViGEvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzViGUvfEeevYvj3z7wmpg" name="xf" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzViGkvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzViG0vfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzViHEvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzViHUvfEeevYvj3z7wmpg" name="yf" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzViHkvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzViH0vfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzViIEvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzViIUvfEeevYvj3z7wmpg" isUnique="false" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzViIkvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzViI0vfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzViJEvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jzViJUvfEeevYvj3z7wmpg" name="Echiquier">
+        <ownedAttribute xmi:id="_jzViJkvfEeevYvj3z7wmpg" name="echi" visibility="private" type="_jzVhxEvfEeevYvj3z7wmpg" association="_jzVirUvfEeevYvj3z7wmpg">
+          <ownedComment xmi:id="_jzViJ0vfEeevYvj3z7wmpg">
+            <body>new Case[8][8]</body>
+          </ownedComment>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzViKEvfEeevYvj3z7wmpg" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzViKUvfEeevYvj3z7wmpg"/>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_jzViKkvfEeevYvj3z7wmpg" name="Echiquier" visibility="public">
+          <ownedComment xmi:id="_jzViK0vfEeevYvj3z7wmpg">
+            <body>for (int i=0;i&lt;8;i++)
+{
+    for(int j=0;j&lt;8;j++){
+        this.getEchi()[i][j]=new Case(); //Placement des cases sur l'echiquier
+    }
+}
+lancer(); //Placement des pièces dans les cases de l'échiquier
+afficher();
+</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_jzViLEvfEeevYvj3z7wmpg" name="cheminLibre" visibility="public">
+          <ownedComment xmi:id="_jzViLUvfEeevYvj3z7wmpg">
+            <body>return true;</body>
+          </ownedComment>
+          <ownedComment xmi:id="_jzViLkvfEeevYvj3z7wmpg">
+            <body>int couleur=getEchi()[xi][yi].getPiece().Getcouleur();
+ if (getEchi()[xi][yi].getPiece() instanceof Roi || getEchi()[xi][yi].getPiece() instanceof Cavalier){
+     if(getEchi()[xf][yf].getPiece()!=null){
+          if(getEchi()[xf][yf].getPiece().Getcouleur()==couleur){
+              return false;
+  
+          }
+          }
+     
+     return true;
+     
+ }
+ if(getEchi()[xf][yf].getPiece()!=null){
+ if(getEchi()[xf][yf].getPiece().Getcouleur()==couleur){
+     return false;
+     
+ }
+ }
+ int distx=xf-xi;//Distance entre deux case
+ int disty=yf-yi;//Distance entre deux case
+ 
+ int dx=0;
+ int dy=0;
+ 
+ if (distx>0){dx=1;}//Haut vers bas
+ if (distx&lt;0){dx=-1;}//bas vers haut
+ if (disty>0){dy=1;}// gauche vers droite
+ if (disty&lt;0){dy=-1;}// droite vers gauche
+ 
+ int cntrx=xi;
+ int cntry=yi;
+ 
+ if (disty==0){//deplacement vertical
+     cntrx=cntrx+dx;
+     for(int i=1;i&lt;Math.abs(distx);i++){        
+      if(echi[cntrx][cntry].getPiece()!=null){
+          System.out.println(&quot;Chemin vertical nonlibre&quot;);
+          return false;
+      }
+      cntrx=cntrx+dx;
+     }
+ }
+ 
+ if (distx==0){//deplacement horizantal
+     cntry=cntry+dy;
+     for(int i=1;i&lt;Math.abs(disty);i++){
+      if( echi[cntrx][cntry].getPiece()!=null){
+          System.out.println(&quot;Chemin horizontal nonlibre&quot;);
+          return false;
+      }
+      cntry=cntry+dy;
+     }
+ }
+ if (distx!=0 &amp;&amp; disty!=0){//deplacement diagonale
+     cntrx=cntrx+dx;
+     cntry=cntry+dy;
+     System.out.println(cntrx);
+      System.out.println(cntry);
+
+     for(int i=1;i&lt;Math.abs(distx);i++){
+      if( echi[cntrx][cntry].getPiece()!=null){
+
+          System.out.println(echi[cntrx][cntry].getPiece());
+          System.out.println(&quot;Chemin diagonale nonlibre&quot;);
+          return false;
+      }
+     System.out.println(cntrx);
+      System.out.println(cntry);
+      cntrx=cntrx+dx;
+      cntry=cntry+dy;
+     }
+ }
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzViL0vfEeevYvj3z7wmpg" name="xi" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzViMEvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzViMUvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzViMkvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzViM0vfEeevYvj3z7wmpg" name="yi" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzViNEvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzViNUvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzViNkvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzViN0vfEeevYvj3z7wmpg" name="xf" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzViOEvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzViOUvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzViOkvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzViO0vfEeevYvj3z7wmpg" name="yf" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzViPEvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzViPUvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzViPkvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzViP0vfEeevYvj3z7wmpg" isUnique="false" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzViQEvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzViQUvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzViQkvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_jzViQ0vfEeevYvj3z7wmpg" name="memeCouleur" visibility="public">
+          <ownedComment xmi:id="_jzViREvfEeevYvj3z7wmpg">
+            <body>return true;</body>
+          </ownedComment>
+          <ownedComment xmi:id="_jzViRUvfEeevYvj3z7wmpg">
+            <body>int a=(getEchi()[xi][yi].getPiece().Getcouleur());
+int b=(getEchi()[xf][yf].getPiece().Getcouleur());
+if(a==b){
+    System.out.println(&quot;Les cases de départ et arrivée contiennt une piece de la meme couleur&quot;);
+    return false;}
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzViRkvfEeevYvj3z7wmpg" name="xi" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzViR0vfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzViSEvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzViSUvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzViSkvfEeevYvj3z7wmpg" name="xf" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzViS0vfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzViTEvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzViTUvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzViTkvfEeevYvj3z7wmpg" name="yi" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzViT0vfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzViUEvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzViUUvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzViUkvfEeevYvj3z7wmpg" name="yf" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzViU0vfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzViVEvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzViVUvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzViVkvfEeevYvj3z7wmpg" isUnique="false" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzViV0vfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzViWEvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzViWUvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_jzViWkvfEeevYvj3z7wmpg" name="captureParUnPionPossible" visibility="public">
+          <ownedComment xmi:id="_jzViW0vfEeevYvj3z7wmpg">
+            <body>Methode capture par un pion possible, verifie si le deplacement d'un pion en diagonale est valide.
+Donc, il verifie si une piece d'une couleur contraire au pion se trouve a sa diagonale, si oui, le deplacement
+est accepte
+@param Deplacement du pion</body>
+          </ownedComment>
+          <ownedComment xmi:id="_jzViXEvfEeevYvj3z7wmpg">
+            <body>return false;</body>
+          </ownedComment>
+          <ownedComment xmi:id="_jzViXUvfEeevYvj3z7wmpg">
+            <body>//Je vŽrifie si la pice est un pion
+if(getEchi()[xi][yi].getPiece() instanceof Pion)
+{
+    //initialisation des variables dont j'aurai besoin dans mes conditions, ˆ savoir la couleur de la pice de dŽpart et la case d'arrivŽ.
+    Case Arrive = getEchi()[xf][yf];
+    int couleurDepart = getEchi()[xi][yi].getPiece().Getcouleur();
+    
+    //je vŽrifie d'abord si la pice d'arrivŽ existe et si elle est de la couleur contraire de celle de dŽpart.
+    if(!Arrive.estOccupe(couleurDepart))
+        /*Je vérifie si le dŽplacement est valide, 
+         *Le dŽplacement est valide si le produits du dŽplacement x et y donne 1 si la couleur de dŽpart est noir
+         *ou -1 si la pice de départ est blanche. 
+         */
+        if((xf==xi+1) &amp;&amp; (yf==yi+1) &amp;&amp; couleurDepart==1)
+            return true;
+    if((xf==xi-1) &amp;&amp; (yf==yi-1) &amp;&amp; couleurDepart==0)
+        return true;
+}
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzViXkvfEeevYvj3z7wmpg" name="xi" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzViX0vfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzViYEvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzViYUvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzViYkvfEeevYvj3z7wmpg" name="yi" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzViY0vfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzViZEvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzViZUvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzViZkvfEeevYvj3z7wmpg" name="xf" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzViZ0vfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzViaEvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzViaUvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzViakvfEeevYvj3z7wmpg" name="yf" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVia0vfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVibEvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVibUvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzVibkvfEeevYvj3z7wmpg" isUnique="false" direction="return">
+            <ownedComment xmi:id="_jzVib0vfEeevYvj3z7wmpg">
+              <body>vrai ou faux si le pion peut manger la piece ou non</body>
+            </ownedComment>
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVicEvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVicUvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVickvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_jzVic0vfEeevYvj3z7wmpg" name="Peutetredeplacer" visibility="public">
+          <ownedComment xmi:id="_jzVidEvfEeevYvj3z7wmpg">
+            <body>if(getEchi()[xi][xf].getPiece()==null){return false;}
+if (getEchi()[xi][yi].getPiece().moveValable(xi,yi,xf,yf)==true   &amp;&amp; cheminLibre(xi,yi,xf,yf)){//verfie le deplacement est valable pour la piece
+     return true;
+ }
+ else if(getEchi()[xi][yi].getPiece() instanceof Pion &amp;&amp; captureParUnPionPossible(xi,yi,xf,yf) ){
+     return true;
+ }
+
+ else 
+     return false;
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzVidUvfEeevYvj3z7wmpg" name="xi" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVidkvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVid0vfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVieEvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzVieUvfEeevYvj3z7wmpg" name="yi" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzViekvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVie0vfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVifEvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzVifUvfEeevYvj3z7wmpg" name="xf" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVifkvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVif0vfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVigEvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzVigUvfEeevYvj3z7wmpg" name="yf" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVigkvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVig0vfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVihEvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzVihUvfEeevYvj3z7wmpg" isUnique="false" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVihkvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVih0vfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzViiEvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_jzViiUvfEeevYvj3z7wmpg" name="deplacer" visibility="public">
+          <ownedComment xmi:id="_jzViikvfEeevYvj3z7wmpg">
+            <body>//i=initial f=final x,y position
+             
+
+             if (getEchi()[xi][yi].getPiece().moveValable(xi,yi,xf,yf)==true   &amp;&amp; cheminLibre(xi,yi,xf,yf)){//verfie le deplacement est valable pour la piece
+                 Piece temp=getEchi()[xi][yi].getPiece();
+                 getEchi()[xf][yf].setPiece(temp);//met la piece qui est dans les coordonnéée inital dans le coordonnéé nouvelle
+                 getEchi()[xi][yi].setPiece(null);//detruit la piece qui etait dans la coordonnée initiales
+             
+             }
+             else if(getEchi()[xi][yi].getPiece() instanceof Pion &amp;&amp; captureParUnPionPossible(xi,yi,xf,yf) ){
+                 Piece temp1=getEchi()[xi][yi].getPiece();
+                 getEchi()[xf][yf].setPiece(temp1);//met la piece qui est dans les coordonnéée inital dans le coordonnéé nouvelle
+                 getEchi()[xi][yi].setPiece(null);//detruit la piece qui etait dans la coordonnée initiales
+             }
+             else 
+                 System.out.println(&quot;deplacement impossible&quot;);</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzVii0vfEeevYvj3z7wmpg" name="xi" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVijEvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVijUvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVijkvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzVij0vfEeevYvj3z7wmpg" name="yi" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVikEvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVikUvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVikkvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzVik0vfEeevYvj3z7wmpg" name="xf" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVilEvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVilUvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVilkvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzVil0vfEeevYvj3z7wmpg" name="yf" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVimEvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVimUvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVimkvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_jzVim0vfEeevYvj3z7wmpg" name="lancer" visibility="public">
+          <ownedComment xmi:id="_jzVinEvfEeevYvj3z7wmpg">
+            <body>getEchi()[0][0].setPiece(new Tour(0,0,0)); 
+getEchi()[0][1].setPiece(new Cavalier(0,0,1));
+getEchi()[0][2].setPiece(new Fou(0,0,2));
+getEchi()[0][3].setPiece(new Reine(0,0,3));
+getEchi()[0][4].setPiece(new Roi(0,0,4));
+getEchi()[0][5].setPiece(new Fou(0,0,5));
+getEchi()[0][6].setPiece(new Cavalier(0,0,6));
+getEchi()[0][7].setPiece(new Tour(0,0,7));
+
+getEchi()[1][0].setPiece(new Pion(0,1,7));
+getEchi()[1][1].setPiece(new Pion(0,1,7));
+getEchi()[1][2].setPiece(new Pion(0,1,7));
+getEchi()[1][3].setPiece(new Pion(0,1,7));
+getEchi()[1][4].setPiece(new Pion(0,1,7));
+getEchi()[1][5].setPiece(new Pion(0,1,7));
+getEchi()[1][6].setPiece(new Pion(0,1,7));
+getEchi()[1][7].setPiece(new Pion(0,1,7));
+     
+getEchi()[6][0].setPiece(new Pion(1,0,7));
+getEchi()[6][1].setPiece(new Pion(1,0,7));
+getEchi()[6][2].setPiece(new Pion(1,0,7));
+getEchi()[6][3].setPiece(new Pion(1,0,7));
+getEchi()[6][4].setPiece(new Pion(1,0,7));
+getEchi()[6][5].setPiece(new Pion(1,0,7));
+getEchi()[6][6].setPiece(new Pion(1,0,7));
+getEchi()[6][7].setPiece(new Pion(1,0,7));
+     
+         
+
+getEchi()[7][0].setPiece(new Tour(1,0,0));
+getEchi()[7][1].setPiece(new Cavalier(1,0,1));
+getEchi()[7][2].setPiece(new Fou(1,0,2));
+getEchi()[7][3].setPiece(new Reine(1,0,3));
+getEchi()[7][4].setPiece(new Roi(1,0,4));
+getEchi()[7][5].setPiece(new Fou(1,0,5));
+getEchi()[7][6].setPiece(new Cavalier(1,0,6));
+getEchi()[7][7].setPiece(new Tour(1,0,7));
+</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_jzVinUvfEeevYvj3z7wmpg" name="afficher" visibility="public">
+          <ownedComment xmi:id="_jzVinkvfEeevYvj3z7wmpg">
+            <body>int cpt = 0;
+
+for(int i=0;i&lt;8;i++){
+    if(i==0)
+        System.out.print(&quot;     A    B    C    D    E    F    G    H \n&quot;+ &quot;  ┌────┬────┬────┬────┬────┬────┬────┬────┐&quot;);
+    if(i>=1){
+        System.out.print(&quot;\n  ├────┼────┼────┼────┼────┼────┼────┼────┤&quot;);
+
+    }
+
+    System.out.print(&quot;\n&quot;);
+    for(int j=0;j&lt;8;j++){
+        if(i==0 &amp;&amp; cpt == 0){
+            System.out.print(&quot;1 │&quot;);
+        cpt++;
+        }
+        if(i==1 &amp;&amp; cpt == 1){
+            System.out.print(&quot;2 │&quot;);
+        cpt++;
+        }
+        if(i==2 &amp;&amp; cpt == 2){
+            System.out.print(&quot;3 │&quot;);
+        cpt++;
+        }
+        if(i==3 &amp;&amp; cpt == 3){
+            System.out.print(&quot;4 │&quot;);
+        cpt++;
+        }
+        if(i==4 &amp;&amp; cpt == 4){
+            System.out.print(&quot;5 │&quot;);
+        cpt++;
+        }
+        if(i==5 &amp;&amp; cpt == 5){
+            System.out.print(&quot;6 │&quot;);
+        cpt++;
+        }
+        if(i==6 &amp;&amp; cpt == 6){
+            System.out.print(&quot;7 │&quot;);
+        cpt++;
+        }
+        if(i==7 &amp;&amp; cpt == 7){
+            System.out.print(&quot;8 │&quot;);
+        cpt++;
+        }
+        if(!getEchi()[i][j].estOccupe()){
+            System.out.print(&quot;    │&quot;);
+        }
+        if(getEchi()[i][j].getPiece()!=null){
+
+        String k=getEchi()[i][j].toString();
+        System.out.print(&quot;      &quot;+k+ &quot;    │&quot;);
+}
+
+            }
+
+         }
+   System.out.print(&quot;\n  └────┴────┴────┴────┴────┴────┴────┴────┘&quot;);
+   System.out.print(&quot;\n\n&quot;);
+</body>
+          </ownedComment>
+        </ownedOperation>
+        <ownedOperation xmi:id="_jzVin0vfEeevYvj3z7wmpg" name="getEchi" visibility="public">
+          <ownedComment xmi:id="_jzVioEvfEeevYvj3z7wmpg">
+            <body>return echi;</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzVioUvfEeevYvj3z7wmpg" type="_jzVhxEvfEeevYvj3z7wmpg" isUnique="false" direction="return">
+            <ownedComment xmi:id="_jzViokvfEeevYvj3z7wmpg">
+              <body>the echi</body>
+            </ownedComment>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVio0vfEeevYvj3z7wmpg" value="*"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVipEvfEeevYvj3z7wmpg"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVipUvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_jzVipkvfEeevYvj3z7wmpg" name="setEchi" visibility="public">
+          <ownedComment xmi:id="_jzVip0vfEeevYvj3z7wmpg">
+            <body>this.echi = echi;</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzViqEvfEeevYvj3z7wmpg" name="echi" type="_jzVhxEvfEeevYvj3z7wmpg" isUnique="false">
+            <ownedComment xmi:id="_jzViqUvfEeevYvj3z7wmpg">
+              <body>the echi to set</body>
+            </ownedComment>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzViqkvfEeevYvj3z7wmpg" value="*"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzViq0vfEeevYvj3z7wmpg"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVirEvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_jzVirUvfEeevYvj3z7wmpg" memberEnd="_jzViJkvfEeevYvj3z7wmpg _jzVirkvfEeevYvj3z7wmpg">
+        <ownedEnd xmi:id="_jzVirkvfEeevYvj3z7wmpg" visibility="public" type="_jzViJUvfEeevYvj3z7wmpg" association="_jzVirUvfEeevYvj3z7wmpg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVir0vfEeevYvj3z7wmpg"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jzVisEvfEeevYvj3z7wmpg" name="Fou">
+        <generalization xmi:id="_jzVisUvfEeevYvj3z7wmpg" general="_jzVi3kvfEeevYvj3z7wmpg"/>
+        <ownedOperation xmi:id="_jzViskvfEeevYvj3z7wmpg" name="Fou" visibility="public">
+          <ownedComment xmi:id="_jzVis0vfEeevYvj3z7wmpg">
+            <body>super(&quot;Fou&quot;,couleur, x, y);</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzVitEvfEeevYvj3z7wmpg" name="couleur" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVitUvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVitkvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVit0vfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzViuEvfEeevYvj3z7wmpg" name="x" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzViuUvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzViukvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzViu0vfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzVivEvfEeevYvj3z7wmpg" name="y" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVivUvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVivkvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzViv0vfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_jzViwEvfEeevYvj3z7wmpg" name="toString" visibility="public">
+          <ownedComment xmi:id="_jzViwUvfEeevYvj3z7wmpg">
+            <body>return &quot;\u265D&quot;;</body>
+          </ownedComment>
+          <ownedComment xmi:id="_jzViwkvfEeevYvj3z7wmpg">
+            <body>if(couleur==1)
+{
+return &quot;\u2657&quot;;
+}
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzViw0vfEeevYvj3z7wmpg" isUnique="false" direction="return">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVixEvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVixUvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVixkvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_jzVix0vfEeevYvj3z7wmpg" name="moveValable" visibility="public">
+          <ownedComment xmi:id="_jzViyEvfEeevYvj3z7wmpg">
+            <body>return false;</body>
+          </ownedComment>
+          <ownedComment xmi:id="_jzViyUvfEeevYvj3z7wmpg">
+            <body>//i=initial f=final x,y position
+        for (int i=0;i&lt;8;i++){
+            if(((xf==xi+i)||(xf==xi-i)) &amp;&amp; ((yf==yi+i)||(yf==yi-i)))
+                return true;
+        }</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzViykvfEeevYvj3z7wmpg" name="xi" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzViy0vfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVizEvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVizUvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzVizkvfEeevYvj3z7wmpg" name="yi" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzViz0vfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVi0EvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVi0UvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzVi0kvfEeevYvj3z7wmpg" name="xf" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVi00vfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVi1EvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVi1UvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzVi1kvfEeevYvj3z7wmpg" name="yf" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVi10vfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVi2EvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVi2UvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzVi2kvfEeevYvj3z7wmpg" isUnique="false" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVi20vfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVi3EvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVi3UvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jzVi3kvfEeevYvj3z7wmpg" name="Piece" isAbstract="true">
+        <ownedAttribute xmi:id="_jzVi30vfEeevYvj3z7wmpg" name="couleur" visibility="protected" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_jzVi4EvfEeevYvj3z7wmpg" name="nom" visibility="protected" isUnique="false"/>
+        <ownedOperation xmi:id="_jzVi4UvfEeevYvj3z7wmpg" name="Piece" visibility="public">
+          <ownedComment xmi:id="_jzVi4kvfEeevYvj3z7wmpg">
+            <body>this.couleur=couleur;
+this.nom=nom;
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzVi40vfEeevYvj3z7wmpg" name="nom" isUnique="false">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVi5EvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVi5UvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVi5kvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzVi50vfEeevYvj3z7wmpg" name="couleur" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVi6EvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVi6UvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVi6kvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzVi60vfEeevYvj3z7wmpg" name="x" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVi7EvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVi7UvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVi7kvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzVi70vfEeevYvj3z7wmpg" name="y" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVi8EvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVi8UvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVi8kvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_jzVi80vfEeevYvj3z7wmpg" name="Getcouleur" visibility="public">
+          <ownedComment xmi:id="_jzVi9EvfEeevYvj3z7wmpg">
+            <body>return couleur;</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzVi9UvfEeevYvj3z7wmpg" isUnique="false" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVi9kvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVi90vfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVi-EvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_jzVi-UvfEeevYvj3z7wmpg" name="Getnom" visibility="public">
+          <ownedComment xmi:id="_jzVi-kvfEeevYvj3z7wmpg">
+            <body>return nom;</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzVi-0vfEeevYvj3z7wmpg" isUnique="false" direction="return">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVi_EvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVi_UvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVi_kvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_jzVi_0vfEeevYvj3z7wmpg" name="toString" visibility="public" isAbstract="true">
+          <ownedParameter xmi:id="_jzVjAEvfEeevYvj3z7wmpg" isUnique="false" direction="return">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVjAUvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVjAkvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVjA0vfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_jzVjBEvfEeevYvj3z7wmpg" name="moveValable" visibility="public" isAbstract="true">
+          <ownedParameter xmi:id="_jzVjBUvfEeevYvj3z7wmpg" name="xi" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVjBkvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVjB0vfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVjCEvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzVjCUvfEeevYvj3z7wmpg" name="yi" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVjCkvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVjC0vfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVjDEvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzVjDUvfEeevYvj3z7wmpg" name="xf" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVjDkvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVjD0vfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVjEEvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzVjEUvfEeevYvj3z7wmpg" name="yf" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVjEkvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVjE0vfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVjFEvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzVjFUvfEeevYvj3z7wmpg" isUnique="false" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVjFkvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVjF0vfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVjGEvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jzVjGUvfEeevYvj3z7wmpg" name="Pion">
+        <generalization xmi:id="_jzVjGkvfEeevYvj3z7wmpg" general="_jzVi3kvfEeevYvj3z7wmpg"/>
+        <ownedOperation xmi:id="_jzVjG0vfEeevYvj3z7wmpg" name="Pion" visibility="public">
+          <ownedComment xmi:id="_jzVjHEvfEeevYvj3z7wmpg">
+            <body>super(&quot;Pion&quot;,couleur, x, y);</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzVjHUvfEeevYvj3z7wmpg" name="couleur" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVjHkvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVjH0vfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVjIEvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzVjIUvfEeevYvj3z7wmpg" name="x" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVjIkvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVjI0vfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVjJEvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzVjJUvfEeevYvj3z7wmpg" name="y" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVjJkvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVjJ0vfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVjKEvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_jzVjKUvfEeevYvj3z7wmpg" name="toString" visibility="public">
+          <ownedComment xmi:id="_jzVjKkvfEeevYvj3z7wmpg">
+            <body>return &quot;\u265F&quot;;</body>
+          </ownedComment>
+          <ownedComment xmi:id="_jzVjK0vfEeevYvj3z7wmpg">
+            <body>if(couleur==1)
+{
+return &quot;\u2659&quot;;
+}
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzVjLEvfEeevYvj3z7wmpg" isUnique="false" direction="return">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVjLUvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVjLkvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVjL0vfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_jzVjMEvfEeevYvj3z7wmpg" name="moveValable" visibility="public">
+          <ownedComment xmi:id="_jzVjMUvfEeevYvj3z7wmpg">
+            <body>return false;</body>
+          </ownedComment>
+          <ownedComment xmi:id="_jzVjMkvfEeevYvj3z7wmpg">
+            <body>//i=initial f=final x,y position
+        if(couleur==1 &amp;&amp; xi==6 &amp;&amp; xf==4 &amp;&amp; yi-yf==0){//pion noir sur la ligne 6:cad premier move
+                    return true;
+        }
+        if(couleur==0 &amp;&amp; xi==1 &amp;&amp; xf==3 &amp;&amp; yi-yf==0){//pion blanc sur la ligne 1:cad premier move
+
+                    return true;
+        }
+        if (couleur==0){//deplacement du pion normal sans elimier un autre piece
+            if((xf==xi+1)&amp;&amp;(yf==yi))
+                return true;
+            /*if((xf==xi+1)&amp;&amp;(yf==yi-1 || yf==yi+1)){
+  
+                    
+                }*/
+            }
+        
+        if (couleur==1){//deplacement du pion normal sans eliminer un autre pice
+            if((xf==xi-1)&amp;&amp;(yf==yi))
+                return true;
+        }</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzVjM0vfEeevYvj3z7wmpg" name="xi" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVjNEvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVjNUvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVjNkvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzVjN0vfEeevYvj3z7wmpg" name="yi" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVjOEvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVjOUvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVjOkvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzVjO0vfEeevYvj3z7wmpg" name="xf" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVjPEvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVjPUvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVjPkvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzVjP0vfEeevYvj3z7wmpg" name="yf" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVjQEvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVjQUvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVjQkvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzVjQ0vfEeevYvj3z7wmpg" isUnique="false" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVjREvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVjRUvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVjRkvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jzVjR0vfEeevYvj3z7wmpg" name="Reine">
+        <generalization xmi:id="_jzVjSEvfEeevYvj3z7wmpg" general="_jzVi3kvfEeevYvj3z7wmpg"/>
+        <ownedOperation xmi:id="_jzVjSUvfEeevYvj3z7wmpg" name="Reine" visibility="public">
+          <ownedComment xmi:id="_jzVjSkvfEeevYvj3z7wmpg">
+            <body>super(&quot;Reine&quot;,couleur, x, y);</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzVjS0vfEeevYvj3z7wmpg" name="couleur" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVjTEvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVjTUvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVjTkvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzVjT0vfEeevYvj3z7wmpg" name="x" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVjUEvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVjUUvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVjUkvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzVjU0vfEeevYvj3z7wmpg" name="y" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVjVEvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVjVUvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVjVkvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_jzVjV0vfEeevYvj3z7wmpg" name="toString" visibility="public">
+          <ownedComment xmi:id="_jzVjWEvfEeevYvj3z7wmpg">
+            <body>return &quot;\u265B&quot;;</body>
+          </ownedComment>
+          <ownedComment xmi:id="_jzVjWUvfEeevYvj3z7wmpg">
+            <body>if(couleur==1)
+{
+return &quot;\u2655&quot;;
+}
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzVjWkvfEeevYvj3z7wmpg" isUnique="false" direction="return">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVjW0vfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVjXEvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVjXUvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_jzVjXkvfEeevYvj3z7wmpg" name="moveValable" visibility="public">
+          <ownedComment xmi:id="_jzVjX0vfEeevYvj3z7wmpg">
+            <body>return false;</body>
+          </ownedComment>
+          <ownedComment xmi:id="_jzVjYEvfEeevYvj3z7wmpg">
+            <body>//i=initial f=final x,y position
+        for (int i=0;i&lt;8;i++){
+            if(((xf==xi+i)||(xf==xi-i)) &amp;&amp; ((yf==yi+i)||(yf==yi-i)))//deplacement diagonales
+                return true;
+            if (((xf==xi)&amp;&amp;(yf==yi+i))||(yf==yi-i))//deplacement vertical
+                return true;
+            if (((xf==xi+i)||(xf==xi-i))&amp;&amp;(yf==yi))//deplacement horizantal
+                return true;
+        }</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzVjYUvfEeevYvj3z7wmpg" name="xi" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVjYkvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVjY0vfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVjZEvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzVjZUvfEeevYvj3z7wmpg" name="yi" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVjZkvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVjZ0vfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVjaEvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzVjaUvfEeevYvj3z7wmpg" name="xf" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVjakvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVja0vfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVjbEvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzVjbUvfEeevYvj3z7wmpg" name="yf" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVjbkvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVjb0vfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVjcEvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzVjcUvfEeevYvj3z7wmpg" isUnique="false" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVjckvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzVjc0vfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzVjdEvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jzVjdUvfEeevYvj3z7wmpg" name="Roi">
+        <generalization xmi:id="_jzVjdkvfEeevYvj3z7wmpg" general="_jzVi3kvfEeevYvj3z7wmpg"/>
+        <ownedOperation xmi:id="_jzVjd0vfEeevYvj3z7wmpg" name="Roi" visibility="public">
+          <ownedComment xmi:id="_jzVjeEvfEeevYvj3z7wmpg">
+            <body>super(&quot;Roi&quot;,couleur, x, y);</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzVjeUvfEeevYvj3z7wmpg" name="couleur" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzVjekvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzWI0EvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzWI0UvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzWI0kvfEeevYvj3z7wmpg" name="x" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzWI00vfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzWI1EvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzWI1UvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzWI1kvfEeevYvj3z7wmpg" name="y" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzWI10vfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzWI2EvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzWI2UvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_jzWI2kvfEeevYvj3z7wmpg" name="toString" visibility="public">
+          <ownedComment xmi:id="_jzWI20vfEeevYvj3z7wmpg">
+            <body>return &quot;\u265A&quot;;</body>
+          </ownedComment>
+          <ownedComment xmi:id="_jzWI3EvfEeevYvj3z7wmpg">
+            <body>if(couleur==1)
+{
+return &quot;\u2654&quot;;
+}
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzWI3UvfEeevYvj3z7wmpg" isUnique="false" direction="return">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzWI3kvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzWI30vfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzWI4EvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_jzWI4UvfEeevYvj3z7wmpg" name="moveValable" visibility="public">
+          <ownedComment xmi:id="_jzWI4kvfEeevYvj3z7wmpg">
+            <body>return false;</body>
+          </ownedComment>
+          <ownedComment xmi:id="_jzWI40vfEeevYvj3z7wmpg">
+            <body>//i=initial f=final x,y position
+        if ((xf==xi+1||xf==xi-1||xi==xf)&amp;&amp;(yf==yi+1||yf==yi-1||yi==yf))//deplacement dans tous les sens limit� a une case
+            return true;</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzWI5EvfEeevYvj3z7wmpg" name="xi" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzWI5UvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzWI5kvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzWI50vfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzWI6EvfEeevYvj3z7wmpg" name="yi" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzWI6UvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzWI6kvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzWI60vfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzWI7EvfEeevYvj3z7wmpg" name="xf" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzWI7UvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzWI7kvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzWI70vfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzWI8EvfEeevYvj3z7wmpg" name="yf" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzWI8UvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzWI8kvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzWI80vfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzWI9EvfEeevYvj3z7wmpg" isUnique="false" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzWI9UvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzWI9kvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzWI90vfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jzWI-EvfEeevYvj3z7wmpg" name="Test">
+        <ownedOperation xmi:id="_jzWI-UvfEeevYvj3z7wmpg" name="main" visibility="public" isStatic="true">
+          <ownedComment xmi:id="_jzWI-kvfEeevYvj3z7wmpg">
+            <body>// TODO Auto-generated method stub
+    String historique = &quot;&quot;;    
+    Echiquier ex=new Echiquier();
+    System.out.print(ex);
+    System.out.print('\n');
+    int i=0;
+    while(i&lt;1000){
+if(i%2==0){
+    System.out.println(&quot;c'est au tour des blancs de jouer:&quot;);
+    Scanner sc=new Scanner(System.in);
+     System.out.println(&quot;quel piece voulez vous deplacer :&quot;);
+     String str=sc.nextLine();
+     Scanner scs=new Scanner(System.in);
+     System.out.println(&quot;ou voulez vous la deplacer :&quot;);
+     String str2=sc.nextLine();
+     
+     while(str.length()!=2 || str2.length()!=2 || (int)str.charAt(0)&lt;65 || (int)str.charAt(0)>72 || (int)str2.charAt(0)>72 || (int)str2.charAt(0)&lt;65 ||
+             (int)str.charAt(1)&lt;49 || (int)str2.charAt(1)&lt;49 || (int)str.charAt(1)>57 || (int)str2.charAt(1)>57 || ex.getEchi()[(int)str.charAt(1)-49][(int)str.charAt(0)-65].estOccupe(0)|| !ex.Peutetredeplacer((int)str.charAt(1)-49,(int)str.charAt(0)-65,(int)str2.charAt(1)-49,(int)str2.charAt(0)-65)){
+         System.out.println(&quot;saisie incorrecte ou deplacement impossible recommencer&quot;);
+         System.out.println(&quot;quel piece voulez vous deplacer :&quot;);                                                                                                    
+         str=sc.nextLine();
+         System.out.println(&quot;ou voulez vous la deplacer :&quot;);
+         str2=sc.nextLine();
+         
+     }
+     historique=historique+&quot; blanc: deplacement &quot;+ex.getEchi()[(int)str.charAt(1)-49][(int)str.charAt(0)-65].getPiece().Getnom()+&quot; &quot;+ str +&quot; en &quot; + str2 + &quot;\n&quot;;
+     ex.deplacer((int)str.charAt(1)-49,(int)str.charAt(0)-65,(int)str2.charAt(1)-49,(int)str2.charAt(0)-65);
+     
+}
+else{
+System.out.println(&quot;c'est au tour des noirs de jouer:&quot;);
+Scanner sc=new Scanner(System.in);
+ System.out.println(&quot;quel piece voulez vous deplacer :&quot;);
+ String str_noir=sc.nextLine();
+ Scanner scs=new Scanner(System.in);
+ System.out.println(&quot;ou voulez vous la deplacer :&quot;);
+ String str2_noir=sc.nextLine();
+ 
+ while((int)str_noir.charAt(0)&lt;65 || (int)str_noir.charAt(0)>72 || (int)str2_noir.charAt(0)>72 || (int)str2_noir.charAt(0)&lt;65 ||
+         (int)str_noir.charAt(1)&lt;49 || (int)str2_noir.charAt(1)&lt;49 || (int)str_noir.charAt(1)>57 || (int)str2_noir.charAt(1)>57 || 
+         ex.getEchi()[(int)str2_noir.charAt(1)-49][(int)str_noir.charAt(0)-65].estOccupe(1) || !ex.Peutetredeplacer((int)str_noir.charAt(1)-49,(int)str_noir.charAt(0)-65,(int)str2_noir.charAt(1)-49,(int)str2_noir.charAt(0)-65) ){
+     
+     
+     System.out.println(&quot;saisie incorrecte ou deplacement impossible recommencer&quot;);
+     System.out.println(&quot;quel piece voulez vous deplacer :&quot;);
+     str_noir=sc.nextLine();
+     System.out.println(&quot;ou voulez vous la deplacer :&quot;);
+     str2_noir=sc.nextLine();
+     
+ }
+ 
+ historique=historique + &quot;noir: deplacement &quot;+ex.getEchi()[(int)str_noir.charAt(1)-49][(int)str_noir.charAt(0)-65].getPiece().Getnom()+&quot; &quot;+ str_noir +&quot; en &quot; + str2_noir +&quot;\n&quot;;
+ ex.deplacer((int)str_noir.charAt(1)-49,(int)str_noir.charAt(0)-65,(int)str2_noir.charAt(1)-49,(int)str2_noir.charAt(0)-65);
+ 
+}
+ ex.afficher();
+ System.out.println(historique);
+    i++;
+
+    }
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzWI-0vfEeevYvj3z7wmpg" name="args" isUnique="false">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzWI_EvfEeevYvj3z7wmpg" value="*"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzWI_UvfEeevYvj3z7wmpg"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzWI_kvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_jzWI_0vfEeevYvj3z7wmpg" name="Tour">
+        <generalization xmi:id="_jzWJAEvfEeevYvj3z7wmpg" general="_jzVi3kvfEeevYvj3z7wmpg"/>
+        <ownedOperation xmi:id="_jzWJAUvfEeevYvj3z7wmpg" name="Tour" visibility="public">
+          <ownedComment xmi:id="_jzWJAkvfEeevYvj3z7wmpg">
+            <body>super(&quot;Tour&quot;,couleur, x, y);</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzWJA0vfEeevYvj3z7wmpg" name="couleur" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzWJBEvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzWJBUvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzWJBkvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzWJB0vfEeevYvj3z7wmpg" name="x" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzWJCEvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzWJCUvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzWJCkvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzWJC0vfEeevYvj3z7wmpg" name="y" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzWJDEvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzWJDUvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzWJDkvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_jzWJD0vfEeevYvj3z7wmpg" name="toString" visibility="public">
+          <ownedComment xmi:id="_jzWJEEvfEeevYvj3z7wmpg">
+            <body>return &quot;\u265C&quot;;</body>
+          </ownedComment>
+          <ownedComment xmi:id="_jzWJEUvfEeevYvj3z7wmpg">
+            <body>if(couleur==1)
+{
+return &quot;\u2656&quot;;
+}
+</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzWJEkvfEeevYvj3z7wmpg" isUnique="false" direction="return">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzWJE0vfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzWJFEvfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzWJFUvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_jzWJFkvfEeevYvj3z7wmpg" name="moveValable" visibility="public">
+          <ownedComment xmi:id="_jzWJF0vfEeevYvj3z7wmpg">
+            <body>return false;</body>
+          </ownedComment>
+          <ownedComment xmi:id="_jzWJGEvfEeevYvj3z7wmpg">
+            <body>//i=initial f=final x,y position
+        for (int i=0;i&lt;8;i++){
+            if (((xf==xi)&amp;&amp;(yf==yi+i))||(yf==yi-i))// deplacement vertical
+                return true;
+            if (((xf==xi+i)||(xf==xi-i))&amp;&amp;(yf==yi))// deplacement horizantal
+                return true;
+        }</body>
+          </ownedComment>
+          <ownedParameter xmi:id="_jzWJGUvfEeevYvj3z7wmpg" name="xi" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzWJGkvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzWJG0vfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzWJHEvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzWJHUvfEeevYvj3z7wmpg" name="yi" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzWJHkvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzWJH0vfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzWJIEvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzWJIUvfEeevYvj3z7wmpg" name="xf" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzWJIkvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzWJI0vfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzWJJEvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzWJJUvfEeevYvj3z7wmpg" name="yf" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzWJJkvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzWJJ0vfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzWJKEvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_jzWJKUvfEeevYvj3z7wmpg" isUnique="false" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jzWJKkvfEeevYvj3z7wmpg" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jzWJK0vfEeevYvj3z7wmpg" value="1"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_jzWJLEvfEeevYvj3z7wmpg" value=""/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_j5XRQEvfEeevYvj3z7wmpg">
+      <eAnnotations xmi:id="_j5bisEvfEeevYvj3z7wmpg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="JavaExtensions.profile.xmi#_j1Uex0vfEeevYvj3z7wmpg"/>
+      </eAnnotations>
+      <appliedProfile href="JavaExtensions.profile.xmi#_j1UewEvfEeevYvj3z7wmpg"/>
+    </profileApplication>
+    <profileApplication xmi:id="_j5f0IEvfEeevYvj3z7wmpg">
+      <eAnnotations xmi:id="_j5gbMEvfEeevYvj3z7wmpg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="default.profile.xmi#_j3dz10vfEeevYvj3z7wmpg"/>
+      </eAnnotations>
+      <appliedProfile href="default.profile.xmi#_j3dz0EvfEeevYvj3z7wmpg"/>
+    </profileApplication>
+    <profileApplication xmi:id="_j5jegEvfEeevYvj3z7wmpg">
+      <eAnnotations xmi:id="_j5jegUvfEeevYvj3z7wmpg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="Code.profile.xmi#_j49Bl0vfEeevYvj3z7wmpg"/>
+      </eAnnotations>
+      <appliedProfile href="Code.profile.xmi#_j49BkEvfEeevYvj3z7wmpg"/>
+    </profileApplication>
+  </uml:Model>
+  <JavaExtensions:JavaPackage xmi:id="_j5raUEvfEeevYvj3z7wmpg" base_Element="_jzVhw0vfEeevYvj3z7wmpg"/>
+  <JavaExtensions:JavaClass xmi:id="_j5sBYEvfEeevYvj3z7wmpg" base_Element="_jzVhxEvfEeevYvj3z7wmpg"/>
+  <JavaExtensions:StandardFeature xmi:id="_j5socEvfEeevYvj3z7wmpg" base_Element="_jzVhxUvfEeevYvj3z7wmpg" JavaNoInitValue="true"/>
+  <default:create xmi:id="_j5tPgEvfEeevYvj3z7wmpg" base_Element="_jzVhyUvfEeevYvj3z7wmpg"/>
+  <default:create xmi:id="_j5tPgUvfEeevYvj3z7wmpg" base_Element="_jzVhykvfEeevYvj3z7wmpg"/>
+  <JavaExtensions:StandardParameter xmi:id="_j5tPgkvfEeevYvj3z7wmpg" base_Element="_jzVh8EvfEeevYvj3z7wmpg" JavaTypeExpr="String"/>
+  <JavaExtensions:JavaClass xmi:id="_j5t2kEvfEeevYvj3z7wmpg" base_Element="_jzVh90vfEeevYvj3z7wmpg"/>
+  <default:create xmi:id="_j5t2kUvfEeevYvj3z7wmpg" base_Element="_jzVh-UvfEeevYvj3z7wmpg"/>
+  <JavaExtensions:StandardParameter xmi:id="_j5t2kkvfEeevYvj3z7wmpg" base_Element="_jzViCkvfEeevYvj3z7wmpg" JavaTypeExpr="String"/>
+  <JavaExtensions:JavaClass xmi:id="_j5udoEvfEeevYvj3z7wmpg" base_Element="_jzViJUvfEeevYvj3z7wmpg"/>
+  <Code:StandardAssociationEnd xmi:id="_j5udoUvfEeevYvj3z7wmpg" base_Element="_jzViJkvfEeevYvj3z7wmpg">
+    <type>Array</type>
+  </Code:StandardAssociationEnd>
+  <JavaExtensions:StandardAssociationEnd xmi:id="_j5udokvfEeevYvj3z7wmpg" base_Element="_jzViJkvfEeevYvj3z7wmpg" JavaArrayDimension="2"/>
+  <default:create xmi:id="_j5vEsEvfEeevYvj3z7wmpg" base_Element="_jzViKkvfEeevYvj3z7wmpg"/>
+  <Code:StandardParameter xmi:id="_j5vEsUvfEeevYvj3z7wmpg" base_Element="_jzVioUvfEeevYvj3z7wmpg">
+    <type>Array</type>
+  </Code:StandardParameter>
+  <JavaExtensions:StandardParameter xmi:id="_j5vrwEvfEeevYvj3z7wmpg" base_Element="_jzVioUvfEeevYvj3z7wmpg" JavaArrayDimension="2"/>
+  <Code:StandardParameter xmi:id="_j5vrwUvfEeevYvj3z7wmpg" base_Element="_jzViqEvfEeevYvj3z7wmpg">
+    <type>Array</type>
+  </Code:StandardParameter>
+  <JavaExtensions:StandardParameter xmi:id="_j5vrwkvfEeevYvj3z7wmpg" base_Element="_jzViqEvfEeevYvj3z7wmpg" JavaArrayDimension="2"/>
+  <JavaExtensions:JavaClass xmi:id="_j5wS0EvfEeevYvj3z7wmpg" base_Element="_jzVisEvfEeevYvj3z7wmpg"/>
+  <default:create xmi:id="_j5wS0UvfEeevYvj3z7wmpg" base_Element="_jzViskvfEeevYvj3z7wmpg"/>
+  <JavaExtensions:StandardParameter xmi:id="_j5wS0kvfEeevYvj3z7wmpg" base_Element="_jzViw0vfEeevYvj3z7wmpg" JavaTypeExpr="String"/>
+  <JavaExtensions:JavaClass xmi:id="_j5wS00vfEeevYvj3z7wmpg" base_Element="_jzVi3kvfEeevYvj3z7wmpg"/>
+  <JavaExtensions:StandardFeature xmi:id="_j5wS1EvfEeevYvj3z7wmpg" base_Element="_jzVi30vfEeevYvj3z7wmpg" JavaNoInitValue="true"/>
+  <JavaExtensions:StandardAttribute xmi:id="_j5wS1UvfEeevYvj3z7wmpg" base_Element="_jzVi4EvfEeevYvj3z7wmpg" JavaTypeExpr="String"/>
+  <JavaExtensions:StandardFeature xmi:id="_j5w54EvfEeevYvj3z7wmpg" base_Element="_jzVi4EvfEeevYvj3z7wmpg" JavaNoInitValue="true"/>
+  <default:create xmi:id="_j5w54UvfEeevYvj3z7wmpg" base_Element="_jzVi4UvfEeevYvj3z7wmpg"/>
+  <JavaExtensions:StandardParameter xmi:id="_j5w54kvfEeevYvj3z7wmpg" base_Element="_jzVi40vfEeevYvj3z7wmpg" JavaTypeExpr="String"/>
+  <JavaExtensions:StandardParameter xmi:id="_j5xg8EvfEeevYvj3z7wmpg" base_Element="_jzVi-0vfEeevYvj3z7wmpg" JavaTypeExpr="String"/>
+  <JavaExtensions:StandardParameter xmi:id="_j5xg8UvfEeevYvj3z7wmpg" base_Element="_jzVjAEvfEeevYvj3z7wmpg" JavaTypeExpr="String"/>
+  <JavaExtensions:JavaClass xmi:id="_j5xg8kvfEeevYvj3z7wmpg" base_Element="_jzVjGUvfEeevYvj3z7wmpg"/>
+  <default:create xmi:id="_j5yIAEvfEeevYvj3z7wmpg" base_Element="_jzVjG0vfEeevYvj3z7wmpg"/>
+  <JavaExtensions:StandardParameter xmi:id="_j5yIAUvfEeevYvj3z7wmpg" base_Element="_jzVjLEvfEeevYvj3z7wmpg" JavaTypeExpr="String"/>
+  <JavaExtensions:JavaClass xmi:id="_j5yIAkvfEeevYvj3z7wmpg" base_Element="_jzVjR0vfEeevYvj3z7wmpg"/>
+  <default:create xmi:id="_j5yIA0vfEeevYvj3z7wmpg" base_Element="_jzVjSUvfEeevYvj3z7wmpg"/>
+  <JavaExtensions:StandardParameter xmi:id="_j5yvEEvfEeevYvj3z7wmpg" base_Element="_jzVjWkvfEeevYvj3z7wmpg" JavaTypeExpr="String"/>
+  <JavaExtensions:JavaClass xmi:id="_j5yvEUvfEeevYvj3z7wmpg" base_Element="_jzVjdUvfEeevYvj3z7wmpg"/>
+  <default:create xmi:id="_j5yvEkvfEeevYvj3z7wmpg" base_Element="_jzVjd0vfEeevYvj3z7wmpg"/>
+  <JavaExtensions:StandardParameter xmi:id="_j5zWIEvfEeevYvj3z7wmpg" base_Element="_jzWI3UvfEeevYvj3z7wmpg" JavaTypeExpr="String"/>
+  <JavaExtensions:JavaClass xmi:id="_j5zWIUvfEeevYvj3z7wmpg" base_Element="_jzWI-EvfEeevYvj3z7wmpg">
+    <JavaImport>java.util.Scanner</JavaImport>
+  </JavaExtensions:JavaClass>
+  <Code:StandardParameter xmi:id="_j5zWIkvfEeevYvj3z7wmpg" base_Element="_jzWI-0vfEeevYvj3z7wmpg">
+    <type>Array</type>
+  </Code:StandardParameter>
+  <JavaExtensions:StandardParameter xmi:id="_j5z9MEvfEeevYvj3z7wmpg" base_Element="_jzWI-0vfEeevYvj3z7wmpg" JavaTypeExpr="String"/>
+  <JavaExtensions:JavaClass xmi:id="_j5z9MUvfEeevYvj3z7wmpg" base_Element="_jzWI_0vfEeevYvj3z7wmpg"/>
+  <default:create xmi:id="_j5z9MkvfEeevYvj3z7wmpg" base_Element="_jzWJAUvfEeevYvj3z7wmpg"/>
+  <JavaExtensions:StandardParameter xmi:id="_j5z9M0vfEeevYvj3z7wmpg" base_Element="_jzWJEkvfEeevYvj3z7wmpg" JavaTypeExpr="String"/>
+</xmi:XMI>
